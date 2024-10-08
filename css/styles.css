@@ -69,6 +69,7 @@ footer {
     padding: 20px;
     background-color: #0a5a83;
     color: white;
+    bottom: -130px;
 }
 /* Media Queries */
 @media (max-width: 600px) {
