@@ -1,0 +1,157 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    background-color: white;
+    color: #333;
+}
+
+header {
+    background-color: #0a5a83; /* Blue */
+    padding: 10px 20px;
+   /* position: static; */
+    width: 100%;
+    margin-top: 0px;
+    position: relative;
+}
+
+nav {
+    padding: 10px;
+    margin-left: 0px;
+}
+
+nav a {
+    color: rgb(12, 11, 11);
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 0px;
+}
+
+nav a:hover {
+    color: #79b3f0; /* light blue */
+}
+
+.container {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a5a83;
+    color: white;
+}
+/* Media Queries */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .medway-logo {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        width: 144px;
+        height: 72px;
+    }
+
+.norse-logo {
+    flex-direction: column;
+    align-items: center;
+}
+
+.norse-nav {
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+.medway-logo {
+    position: fixed;
+    top: 150px;
+    right: 0px;
+    width: 192px;
+    height: 96px;
+}
+
+.banner {
+padding: 24px;
+background-color: #0a5a83;
+}
+
+.medway-nav {
+    background-color: rgb(242, 242, 243);
+    font-weight: bold;
+}
+
+.norse-banner {
+    padding: 25px;
+    background-color: #47525e ;
+    color: white;
+}
+
+.norse-logo {
+    width: 192px;
+    position: fixed;
+    top: 10px;
+}
+
+.norse-nav {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0px 20px
+    position: relative;
+	width: 100%;
+	max-width: 50%;
+    top: 10%;
+    left: 10%;
+    transform: translate(25%,25%);
+}
+
+.norse-nav:hover {
+    color: rgb(231, 61, 92);
+}
+
+.down-arrow {
+    color: rgb(231, 61, 92);
+    border-radius: 50%;
+    border: none;
+    background-color: #47525e;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+}
+.down-arrow:hover {
+    background-color: #88919b;
+}
