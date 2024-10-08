@@ -29,8 +29,8 @@ p {
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: white;
     color: #333;
 }
@@ -38,7 +38,6 @@ body {
 header {
     background-color: #0a5a83; /* Blue */
     padding: 10px 20px;
-   /* position: static; */
     width: 100%;
     margin-top: 0px;
     position: relative;
@@ -62,6 +61,7 @@ nav a:hover {
 
 .container {
     padding: 20px;
+    margin: 0px 150px;
 }
 
 footer {
@@ -78,16 +78,20 @@ footer {
     }
 
     .medway-logo {
-        position: relative;
+        position: sticky;
         flex-direction: column;
         align-items: center;
         width: 144px;
         height: 72px;
+        top: -75px;
+        right: -50px;
     }
 
 .norse-logo {
-    flex-direction: column;
+   flex-direction: column;
     align-items: center;
+    position: sticky;
+
 }
 
 .norse-nav {
@@ -97,21 +101,27 @@ footer {
 }
 
 .medway-logo {
-    position: fixed;
-    top: 150px;
-    right: 0px;
+    position: relative;
+    top: -55px;
+    right: -1250px;
     width: 192px;
     height: 96px;
+    padding: 0px;
 }
 
 .banner {
-padding: 24px;
+padding: 20px 0px -10px 0px;
 background-color: #0a5a83;
+position: relative;
+top: -40px;
 }
 
 .medway-nav {
     background-color: rgb(242, 242, 243);
     font-weight: bold;
+    position: relative;
+    top: -40px;
+    padding: 25px;
 }
 
 .norse-banner {
@@ -122,20 +132,21 @@ background-color: #0a5a83;
 
 .norse-logo {
     width: 192px;
-    position: fixed;
-    top: 10px;
+    position: relative;
+    top: 75px;
+    margin-left: 150px;
 }
 
 .norse-nav {
     color: white;
     font-weight: bold;
     font-size: 16px;
-    padding: 0px 20px
+    padding: 10px 20px;
     position: relative;
 	width: 100%;
 	max-width: 50%;
-    top: 10%;
-    left: 10%;
+    top: -10px;
+    left: 50px;
     transform: translate(25%,25%);
 }
 
@@ -143,15 +154,54 @@ background-color: #0a5a83;
     color: rgb(231, 61, 92);
 }
 
-.down-arrow {
+.fa {
     color: rgb(231, 61, 92);
     border-radius: 50%;
     border: none;
     background-color: #47525e;
-    font-weight: bold;
     height: 28px;
     width: 28px;
 }
-.down-arrow:hover {
+
+.fa:hover {
     background-color: #88919b;
+}
+
+.medway-header {
+    padding: 0px 180px;
+    position: relative;
+    top: 55px;
+}
+
+.nav-link {
+    margin-left: 5px;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 150px;
+}
+
+.pest-nav {
+    padding-left: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    top: -50px;
+    font-size: 12px;
+}
+
+.contact-btn {
+    padding: 25px 40px;
+    border-radius: 0px 20px;
+    border: none;
+    background-color: rgb(231, 61, 92);
+    color: white;
+    position: relative;
+    top: -115px;
+    right: -250px;
+}
+.contact-btn:hover {
+    background-color: white;
+    color: rgb(231, 61, 92);
 }
