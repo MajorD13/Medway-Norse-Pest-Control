@@ -72,22 +72,6 @@ footer {
     position: relative;
     bottom: -130px;
 }
-/* Media Queries */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .medway-logo {
-        position: sticky;
-        flex-direction: column;
-        align-items: center;
-        width: 144px;
-        height: 72px;
-        top: -75px;
-        right: -50px;
-    }
 
 .norse-logo {
    flex-direction: column;
@@ -99,8 +83,9 @@ footer {
 .norse-nav {
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
-}
+
 
 .medway-logo {
     position: relative;
@@ -163,6 +148,7 @@ top: -40px;
     background-color: #47525e;
     height: 28px;
     width: 28px;
+    cursor: pointer;
 }
 
 .fa:hover {
@@ -194,16 +180,93 @@ top: -40px;
 }
 
 .contact-btn {
+    font-weight: bold;
     padding: 25px 40px;
     border-radius: 0px 20px;
     border: none;
     background-color: rgb(231, 61, 92);
     color: white;
     position: relative;
-    top: -115px;
-    right: -250px;
+    top: -145px;
+    right: -1250px;
+    cursor: pointer;
 }
 .contact-btn:hover {
     background-color: white;
     color: rgb(231, 61, 92);
+}
+
+ /*cookies*/
+
+ #consentBox {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: fixed;
+    top: 50px;
+    left: 650px;
+    width: 500px;
+}
+
+#consentBox.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+::selection {
+    color: #fff;
+    background: #229a0f;
+}
+
+#consentContent p {
+    color: #858585;
+    margin: 10px 0 20px 0;
+}
+
+#consentContent .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.consentButton,
+.rejectButton {
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.consentButton {
+    background: #e73d5c;
+    margin-right: 10px;
+}
+
+.rejectButton {
+    color: #111211;
+    background: transparent;
+    border: 2px solid #e73d5c;
+    text-decoration: none;
+}
+
+#consentBox img {
+    max-width: 90px;
+}
+
+#consentHeader {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    width: auto;
+    background-color: transparent;
 }
