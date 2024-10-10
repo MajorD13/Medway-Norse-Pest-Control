@@ -41,19 +41,42 @@
             <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="services.html">Services</a>
-            <a class="nav-link" href="contact_form.php">Contact Us</a>
+            <a class="nav-link" href="contact-us.html">Contact Us</a>
             <a class="nav-link" href="faq.html">FAQ</a>
         </nav>
     </span>
     <div class="container">
-        <h2>Welcome to Medway Norse Pest Control</h2>
-        <p>Your pest control solution for a healthier home.</p>
-        <p id="demo"></p>
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for any inquiries!</p>
     </div>
+<!--     Contact Form    -->
+<h2>Contact Us</h2>
+    <form action="process_form.php" method="post">
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="streetAddress">Street Address:</label><br>
+        <textarea id="streetAddress" name="streetAddress" rows="4" required></textarea><br><br>
+
+        <label for="pestService">Pest Service Required:</label><br>
+        <input type="text" id="pestService" name="pestService" required><br><br>
+
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
     <footer>
         <p>&copy; 2024 Medway Norse Pest Control</p>
     </footer>
-<!--       cookies     --> 
+    <!--       cookies     --> 
 <div id="consentBox">
     <img src=
 "images/Norse_Group_logo.png"
@@ -79,6 +102,5 @@
     </div>
 </div>
 <script src="script.js"></script>
-
 </body>
 </html>
