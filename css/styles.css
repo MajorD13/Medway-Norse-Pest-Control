@@ -81,33 +81,39 @@ padding: 5px;
     top: 25px;
 }
 
+
 #norse-nav {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    position: relative;
-    bottom: 15px;
-    left: -50px;
-    padding: 0px 20px;
+  display: flex; /* Use flexbox for horizontal alignment */
 }
 
-#norse-nav:hover {
-    color: rgb(231, 61, 92);
+.nav-item {
+  display: flex;
+  align-items: center; /* Align text and icon vertically */
+  padding: 10px ; /* Add padding for better spacing */
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* Default text color */
+  transition: color 0.3s; /* Smooth transition for text color */
+  white-space: nowrap;
+  margin: 0px 20px ;
+  position: relative;
+  bottom: 40px;
 }
 
-.fa {
-    color: rgb(231, 61, 92);
-    border-radius: 50%;
-    border: none;
-    background-color: #47525e;
-    height: 28px;
-    width: 28px;
-    cursor: pointer;
+.nav-item:hover {
+  color: rgb(231, 61, 92); /* Change text color on hover */
 }
 
-.fa:hover {
-    background-color: #88919b;
+.nav-item .fa {
+  color: rgb(231, 61, 92); /* Font Awesome icon color */
+  padding: 3px; /* Add padding for the background */
+  transition: background-color 0.1s; /* Smooth transition for background */
+  border-radius: 50%;
+  font-weight: 100;
 }
+
+.nav-item:hover .fa {
+  background-color: #88919b; /* Change background on hover for the icon */
+ }
 
 #contact-btn {
     font-weight: bold;
