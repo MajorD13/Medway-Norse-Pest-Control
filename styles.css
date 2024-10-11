@@ -29,8 +29,8 @@ p {
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: white;
     color: #333;
 }
@@ -38,7 +38,6 @@ body {
 header {
     background-color: #0a5a83; /* Blue */
     padding: 10px 20px;
-   /* position: static; */
     width: 100%;
     margin-top: 0px;
     position: relative;
@@ -62,6 +61,8 @@ nav a:hover {
 
 .container {
     padding: 20px;
+    margin: 0px 150px;
+    text-align: center;
 }
 
 footer {
@@ -69,73 +70,72 @@ footer {
     padding: 20px;
     background-color: #0a5a83;
     color: white;
+    position: relative;
+    bottom: -130px;
 }
-/* Media Queries */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .medway-logo {
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        width: 144px;
-        height: 72px;
-    }
 
 .norse-logo {
-    flex-direction: column;
+   flex-direction: column;
     align-items: center;
+    position: sticky;
+
 }
 
 .norse-nav {
     flex-direction: column;
     align-items: center;
-}
+    width: 100%;
 }
 
+
 .medway-logo {
-    position: fixed;
-    top: 150px;
-    right: 0px;
+    position: relative;
+    top: -55px;
+    right: -1250px;
     width: 192px;
     height: 96px;
+    padding: 0px;
 }
 
 .banner {
-padding: 24px;
+padding: 20px 0px -10px 0px;
 background-color: #0a5a83;
+position: relative;
+top: -40px;
 }
 
 .medway-nav {
     background-color: rgb(242, 242, 243);
     font-weight: bold;
+    position: relative;
+    top: -40px;
+    padding: 25px;
 }
 
 .norse-banner {
     padding: 25px;
     background-color: #47525e ;
     color: white;
+    width: 97.35%;
 }
 
 .norse-logo {
     width: 192px;
-    position: fixed;
-    top: 10px;
+    position: relative;
+    top: 75px;
+    margin-left: 150px;
 }
 
 .norse-nav {
     color: white;
     font-weight: bold;
     font-size: 16px;
-    padding: 0px 20px
+    padding: 10px 20px;
     position: relative;
 	width: 100%;
 	max-width: 50%;
-    top: 10%;
-    left: 10%;
+    top: -10px;
+    left: 50px;
     transform: translate(25%,25%);
 }
 
@@ -143,15 +143,264 @@ background-color: #0a5a83;
     color: rgb(231, 61, 92);
 }
 
-.down-arrow {
+.fa {
     color: rgb(231, 61, 92);
     border-radius: 50%;
     border: none;
     background-color: #47525e;
-    font-weight: bold;
     height: 28px;
     width: 28px;
+    cursor: pointer;
 }
-.down-arrow:hover {
+
+.fa:hover {
     background-color: #88919b;
 }
+
+.medway-header {
+    padding: 0px 180px;
+    position: relative;
+    top: 55px;
+}
+
+.nav-link {
+    margin-left: 5px;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 150px;
+}
+
+.pest-nav {
+    padding-left: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    top: -50px;
+    font-size: 12px;
+}
+
+.contact-btn {
+    font-weight: bold;
+    padding: 25px 40px;
+    border-radius: 0px 20px;
+    border: none;
+    background-color: rgb(231, 61, 92);
+    color: white;
+    position: relative;
+    top: -145px;
+    right: -1250px;
+    cursor: pointer;
+}
+.contact-btn:hover {
+    background-color: white;
+    color: rgb(231, 61, 92);
+}
+
+ /*cookies*/
+
+ #consentBox {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: fixed;
+    top: 50px;
+    left: 650px;
+    width: 500px;
+}
+
+#consentBox.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+::selection {
+    color: #fff;
+    background: #229a0f;
+}
+
+#consentContent p {
+    color: #858585;
+    margin: 10px 0 20px 0;
+}
+
+#consentContent .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.consentButton,
+.rejectButton {
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.consentButton {
+    background: #e73d5c;
+    margin-right: 10px;
+}
+
+.rejectButton {
+    color: #111211;
+    background: transparent;
+    border: 2px solid #e73d5c;
+    text-decoration: none;
+}
+
+#consentBox img {
+    max-width: 90px;
+}
+
+#consentHeader {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    width: auto;
+    background-color: transparent;
+}
+
+/* Form CCS */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  input[type=number], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #0a5a83;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #ffffff;
+    color: #0a5a83;
+    border-color: #0a5a83;
+    border:solid ;
+    border-width: 1px;
+    box-shadow: #333;
+    padding: 11px 19px;
+
+  }
+  
+  /* Add a background color and some padding around the form */
+  .contact-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 15px 400px;
+    font-weight: bold;
+  }
+
+/* radio button */
+
+.radio-cont{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-weight: 400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .radio-cont input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radio-cont:hover input ~ .radio {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-cont input:checked ~ .radio {
+    background-color: #0a5a83;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-cont input:checked ~ .radio:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radio-cont .radio:after {
+       top: 7px;
+      left: 7px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: white;
+  }
