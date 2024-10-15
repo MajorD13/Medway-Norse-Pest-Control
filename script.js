@@ -28,3 +28,9 @@ let checkCookie =
     document.cookie.indexOf("CookieBy=Medway-Norse");
 checkCookie !== -1 ? consentBox.classList.add("hide") :
     consentBox.classList.remove("hide");
+
+    function toggleNav() {
+        const nav = document.getElementById('norse-nav');
+        nav.classList.toggle('active');
+    }
+    
