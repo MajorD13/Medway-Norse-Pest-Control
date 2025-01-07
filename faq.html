@@ -17,7 +17,8 @@
     <header id="norse-banner">
         <div class="container">
             <button onclick="location.href='https://norsegroup.co.uk/contact-us/'" class="cols offset-3 colxl offset-10" id="contact-btn">
-                Contact Us
+                <span class="contact-text">Contact Us</span>
+                <span class="contact-icon fa fa-envelope"></span>
             </button>
             <a href="https://norsegroup.co.uk/">
                 <img src="images/Norse_Group_logo.png" alt="norse group logo" id="norse-logo">
@@ -33,13 +34,14 @@
         </div>
     </header>
     
-        <section id="medway-banner">
-            <div class="container">
-        <h1 class="col" id="medway-header">Medway Norse</h1>
-        <img class="col offset-10" id="medway-logo" src="images/Medway-Rev.png" alt="medway norse logo">
-            </div>
-        </section>
-        <span id="pest-nav">
+    
+    <section id="medway-banner">
+        <div class="container">
+            <h1 class="col" id="medway-header">Medway Norse<br>Pest Control</h1>
+            <img class="col offset-10" id="medway-logo" src="images/Medway-Rev.png" alt="medway norse logo">
+        </div>
+    </section>
+    <span id="pest-nav">
         <nav id="medway-nav">
             <a class="col offset-1" id="nav-link" href="index.html">Home</a>
             <a id="nav-link" href="about.html">About</a>
@@ -48,12 +50,46 @@
             <a id="nav-link" href="faq.html">FAQ</a>
         </nav>
     </span>
-    <div class="container">
+    <div class="container main">
         <h2>Frequently Asked Questions</h2>
-        <p>Find answers to your most common questions.</p>
+    </div>
+    <div class="container main">
+        <p>Find answers to your most common questions.<br><br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </div>
     <footer>
-        <p>&copy; 2024 Medway Norse Pest Control</p>
+        <img class="trustmark" src="images/BPCA-member-logo.jpg" alt="BPCA Member Logo">
+        <img class="trustmark" src="images/RSPH.png" alt="RSPH Logo">
+        <img class="trustmark" src="images/trustmark-logo.png" alt="Trustmark Logo">
+        <p class="copyright">&copy; 2024 Medway Norse Pest Control</p>
     </footer>
-</body>
+    <!--       cookies     --> 
+    <div id="consentBox">
+        <img src="images/Norse_Group_logo.png" alt="Norse Group Logo">
+        <div id="consentContent">
+            <header id="consentHeader">
+                Cookies: The choice is yours
+            </header>
+            <p>
+                We use cookies to make our site work well
+                for you and so we can continually improve it.
+                <br>The cookies that are necessary to 
+                keep the site functioning are always on
+            </p>
+            <div class="buttons">
+                <button class="consentButton">
+                    Accept Cookies
+                </button>
+                <button class="rejectButton">
+                    Reject
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+    </body>
 </html>

@@ -1,36 +1,33 @@
-const consentBox = 
-    document.getElementById("consentBox");
-const acceptBtn = 
-    document.querySelector(".consentButton");
-const rejectBtn = 
-    document.querySelector(".rejectButton");
+// Select elements
+const rejectBtn = document.querySelector('.rejectButton');
+const acceptBtn = document.querySelector('.consentButton'); // Match the HTML class name
+const consentBox = document.getElementById('consentBox');
 
-acceptBtn.onclick = () => {
-    document.cookie = "CookieBy=Medway-Norse; max-age="
-        + 60 * 60 * 24;
-    if (document.cookie) {
-        consentBox.classList.add("hide");
-    } else {
-        alert
-            ("Cookie can't be set! Please"+
-              " unblock this site from the cookie"+
-              " setting of your browser.");
-    }
-};
-
+// Add event listener for the reject button
 rejectBtn.onclick = () => {
-    alert(
-        "Cookies rejected. Some functionality may be limited.");
+    alert("Cookies rejected. Some functionality may be limited.");
     consentBox.classList.add("hide");
 };
 
-let checkCookie = 
-    document.cookie.indexOf("CookieBy=Medway-Norse");
-checkCookie !== -1 ? consentBox.classList.add("hide") :
-    consentBox.classList.remove("hide");
+// Add event listener for the accept button
+acceptBtn.onclick = () => {
+    document.cookie = "CookieBy=Medway-Norse; path=/; max-age=31536000"; // Set cookie for 1 year
+    alert("Cookies accepted. Thank you!");
+    consentBox.classList.add("hide");
+};
 
-    function toggleNav() {
-        const nav = document.getElementById('norse-nav');
-        nav.classList.toggle('active');
-    }
-    
+// Check if the cookie exists and show/hide the consent box accordingly
+let checkCookie = document.cookie.indexOf("CookieBy=Medway-Norse");
+checkCookie !== -1 ? consentBox.classList.add("hide") : consentBox.classList.remove("hide");
+
+
+
+// Function to toggle navigation
+function toggleNav() {
+    const nav = document.getElementById('norse-nav');
+    nav.classList.toggle('active');
+}
+
+// Update the current year in the footer
+let date = new Date().getFullYear();
+document.getElementById("currentYear").textContent = date;

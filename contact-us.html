@@ -17,7 +17,8 @@
     <header id="norse-banner">
         <div class="container">
             <button onclick="location.href='https://norsegroup.co.uk/contact-us/'" class="cols offset-3 colxl offset-10" id="contact-btn">
-                Contact Us
+                <span class="contact-text">Contact Us</span>
+                <span class="contact-icon fa fa-envelope"></span>
             </button>
             <a href="https://norsegroup.co.uk/">
                 <img src="images/Norse_Group_logo.png" alt="norse group logo" id="norse-logo">
@@ -33,13 +34,14 @@
         </div>
     </header>
     
-        <section id="medway-banner">
-            <div class="container">
-        <h1 class="col" id="medway-header">Medway Norse</h1>
-        <img class="col offset-10" id="medway-logo" src="images/Medway-Rev.png" alt="medway norse logo">
-            </div>
-        </section>
-        <span id="pest-nav">
+    
+    <section id="medway-banner">
+        <div class="container">
+            <h1 class="col" id="medway-header">Medway Norse<br>Pest Control</h1>
+            <img class="col offset-10" id="medway-logo" src="images/Medway-Rev.png" alt="medway norse logo">
+        </div>
+    </section>
+    <span id="pest-nav">
         <nav id="medway-nav">
             <a class="col offset-1" id="nav-link" href="index.html">Home</a>
             <a id="nav-link" href="about.html">About</a>
@@ -49,8 +51,8 @@
         </nav>
     </span>
     <div>
-        <h2>Contact Us</h2>
-        <p>Get in touch with us for any inquiries!</p>
+        <h2 class="main">Contact Us</h2>
+        <p>Get in touch with us for any inquiries!<br><br></p>
     </div>
 <!--     Contact Form    -->
     <div class="container" id="contact-form">
@@ -64,15 +66,21 @@
           <input type="hidden" name="_captcha" value="false">
 
           <label for="pnumber">Phone Number:</label>
-          <input type="text" id="pnumber" name="phone_number" placeholder="Enter Your Phone Number.." required>
+          <input type="text" id="pnumber" name="phone_number" placeholder="Enter Your Phone Number.."
+           minlength="11" maxlength="11" title="Phone Number" pattern="0[0-9]{10}" required>
       
           <label for="email">Email Address:</label>
           <input type="email" id="email" name="email" placeholder="Enter Your Email Address..">
 
           <label for="address">Street Address:</label>
-          <textarea id="address" name="address" placeholder="Enter Your Address.." style="height:150px"></textarea><br>
+          <input type="text" id="address" name="building_name/number" placeholder="Building Name/Number" required>
+          <input type="text" id="address" name="street" placeholder="Street Name" required>
+          <input type="text" id="address" name="town" placeholder="City/Town">
+          <input type="text" id="address" name="county" placeholder="County" required>
+          <input type="text" id="postcode" name="post_code" placeholder="Postcode"
+           pattern="^([A-Za-z][A-Ha-hJ-Yj-y]?[0-9][A-Za-z0-9]? ?[0-9][A-Za-z]{2}|[Gg][Ii][Rr] ?0[Aa]{2})$" required>
 
-          <p style="text-align: left;">Type of property:</p>
+          <p style="text-align: left;">Type of Property:</p>
           <label class="radio-cont">Residential
             <input type="radio" checked="checked" name="property_type" value="Residential">
             <span class="radio"></span>
@@ -82,8 +90,25 @@
             <span class="radio"></span>
           </label><br>
 
-          <label for="pest">Pest Service Required:</label>
-          <input type="text" id="pest" name="service_required" placeholder="What service is required?" required>
+          <label for="pest">Pest Service Required:</label><br>
+          <input type="list" list="services" id="pest" name="service_required" placeholder="What service is required?" required>
+          <datalist id="services" >
+                <option value="Rats">
+                <option value="Mice">
+                <option value="Bed bugs">
+                <option value="Flies">
+                <option value="Fleas">
+                <option value="Bird Conrol (pigeons)">
+                <option value="Beetles">
+                <option value="Ants">
+                <option value="Cockroaches">
+                <option value="Squirrels">
+                <option value="Silverfish">
+                <option value="Moths">
+                <option value="Wasps">
+                <option value="Other">
+          </datalist>
+          <br><br>
 
           <label for="comments">Additional Comments:</label>
           <textarea id="comments" name="comments" placeholder="Write something.." style="height:200px"></textarea>
@@ -91,34 +116,36 @@
           <input type="submit" value="Submit">
     </form>
 </div>
-    <footer>
-        <p>&copy; 2024 Medway Norse Pest Control</p>
-    </footer>
-    <!--       cookies     --> 
+<footer>
+    <img class="trustmark" src="images/BPCA-member-logo.jpg" alt="BPCA Member Logo">
+    <img class="trustmark" src="images/RSPH.png" alt="RSPH Logo">
+    <img class="trustmark" src="images/trustmark-logo.png" alt="Trustmark Logo">
+    <p class="copyright">&copy; 2024 Medway Norse Pest Control</p>
+</footer>
+<!--       cookies     --> 
 <div id="consentBox">
-    <img src=
-"images/Norse_Group_logo.png"
-         alt="Logo">
+    <img src="images/Norse_Group_logo.png" alt="Norse Group Logo">
     <div id="consentContent">
         <header id="consentHeader">
-              Cookies: The choice is yours
-          </header>
+            Cookies: The choice is yours
+        </header>
         <p>
-          We use cookies to make our site work well
-          for you and so we can continually improve it.
-          <br>The cookies that are necessary to 
-          keep the site functioning are always on
+            We use cookies to make our site work well
+            for you and so we can continually improve it.
+            <br>The cookies that are necessary to 
+            keep the site functioning are always on
         </p>
         <div class="buttons">
             <button class="consentButton">
-                  Accept Cookies
-              </button>
+                Accept Cookies
+            </button>
             <button class="rejectButton">
-                  Reject
-              </button>
+                Reject
+            </button>
         </div>
     </div>
 </div>
 <script src="script.js"></script>
+
 </body>
 </html>
