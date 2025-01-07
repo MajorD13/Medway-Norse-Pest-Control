@@ -46,7 +46,7 @@ footer {
 
 #medway-logo{
     position: relative;
-    top: -40px;
+    top: -500px;
 }
 
 #medway-banner {
@@ -79,7 +79,6 @@ padding: 5px;
     position: relative;
     right: 250px;
 }
-
 
 #norse-nav {
   display: flex;
@@ -252,11 +251,17 @@ input[type=text], select, textarea {
   input[type=submit] {
     background-color: #0a5a83;
     color: white;
-    padding: 12px 20px;
+    padding: 14px 22px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: opacity 0.5s
+  }
+
+  #pest {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc ;
   }
 
   input[type=submit]:hover{
@@ -270,8 +275,8 @@ input[type=text], select, textarea {
     border:solid ;
     border-width: 1px;
     box-shadow: #333;
-    padding: 11px 19px;
-    font-weight: bold;
+    padding: 10px 18px;
+    /*font-weight: bold;*/
 
   }
   
@@ -798,7 +803,7 @@ input[type=submit]:active {
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: #eee;
+  background-color: #b4afaf;
   border-radius: 50%;
 }
 
@@ -842,6 +847,10 @@ justify-content: center; /* Center items horizontally */
 flex-wrap: wrap; /* Allow items to wrap if necessary */
 }
 
+.main {
+padding-top: 15px;
+}
+
 /* Navbar styles */
 #norse-nav {
 display: flex; /* Keep items horizontal on larger screens */
@@ -874,6 +883,10 @@ margin: 0; /* Remove margin */
   margin-left: 150px; /* Move 110px to the left */
   margin-right: auto; /* Center horizontally */
   display: block; /* Ensure it's a block element */
+}
+
+#medway-banner #medway-header {
+  position: sticky;
 }
 
 .nav-item:hover {
@@ -970,4 +983,86 @@ display: none;
 
 .contact-icon {
   display: none;
+}
+
+/* Container holding the image and the text */
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 350px;
+}
+
+.tile {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.tile:hover::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .img-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .img-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+.trustmark {
+  float: left;
+width: 75px;
+position: relative;
+bottom: 18px;
+margin-right: 10px;
+}
+
+.copyright {
+  position: relative;
+  left: -150px;
+}
+
+footer {
+  position: relative;
+  bottom: -15px;
 }
