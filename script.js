@@ -12,7 +12,7 @@ rejectBtn.onclick = () => {
 // Add event listener for the accept button
 acceptBtn.onclick = () => {
     document.cookie = "CookieBy=Medway-Norse; path=/; max-age=31536000"; // Set cookie for 1 year
-    alert("Cookies accepted. Thank you!");
+   // alert("Cookies accepted. Thank you!");
     consentBox.classList.add("hide");
 };
 
