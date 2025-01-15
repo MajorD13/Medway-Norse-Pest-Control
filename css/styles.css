@@ -1,83 +1,89 @@
 #medway-header {
-    color: #ffffff;
-    font-size: 48px;
-    position: relative;
-    top: 50px;
+  color: #ffffff;
+  font-size: 48px;
+  position: relative;
+  top: 50px;
 }
 
 body {
-    margin: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
-    color: #333;
+  margin: 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: #333;
 }
 
-h2 {
-  text-align: center;
-}
-
-p {
+h2, p {
   text-align: center;
 }
 
 header {
-    background-color: #0a5a83; /* Blue */
+  background-color: #0a5a83; /* Blue */
 }
 
 nav a {
-    color: rgb(12, 11, 11);
-    text-decoration: none;
-    padding: 8px;
+  color: rgb(12, 11, 11);
+  text-decoration: none;
+  padding: 8px;
 }
 
 nav a:hover {
-    color: #79b3f0; /* light blue */
+  color: #79b3f0; /* light blue */
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0a5a83;
-    color: white;
-    margin-top: 250px;
-    position: static;
-    bottom: 0px;
+  text-align: center;
+  padding: 20px;
+  background-color: #0a5a83;
+  color: white;
+  position: fixed; /* Stick the footer to the bottom */
+  bottom: 0;       /* Align it to the bottom */
+  left: 0;
+  width: 100%;     /* Full width of the page */
+  z-index: 10;     /* Ensure it overlays correctly */
+  position: relative; 
+  top: 100px;/* Make footer a positioned container */
 }
 
-#medway-logo{
-    position: relative;
-    top: -500px;
+#medway-logo {
+  position: relative;
+  top: -40px;
 }
 
 #medway-banner {
-background-color: #0a5a83;
-color: #ffffff;
-font-size: 48px;
-padding: 5px;
+  background-color: #0a5a83;
+  color: #ffffff;
+  font-size: 48px;
+  padding: 5px;
 }
 
 #medway-nav {
-    background-color: rgb(242, 242, 243);
-    font-weight: bold;
-    padding: 20px 40px;
+  background-color: rgb(242, 242, 243);
+  font-weight: bold;
+  padding: 20px 40px;
 }
 
 #nav-link {
-  padding-right:20px;
+  padding-right: 20px;
   position: relative;
   left: 100px;
 }
 
+.footer-center {
+  text-align: center;
+  margin: auto;
+}
+
 #norse-banner {
-    background-color: #47525e ;
-    color: white;
-    padding-bottom: 15px;
+  background-color: #47525e;
+  color: white;
+  padding-bottom: 15px;
 }
 
 #norse-logo {
-    width: 200px;
-    position: relative;
-    right: 250px;
+  width: 200px;
+  position: relative;
+  right: -675px;
+  bottom: 55px;
 }
 
 #norse-nav {
@@ -119,493 +125,6 @@ padding: 5px;
 }
 
 #contact-btn {
-    font-weight: bold;
-    padding: 18px 27px;
-    border-radius: 0px 15px;
-    border: none;
-    background-color: rgb(231, 61, 92);
-    color: white;
-    cursor: pointer;
-    margin-top: 10px;
-    position: relative;
-    left: 10px;
-}
-#contact-btn:hover {
-    background-color: white;
-    color: rgb(231, 61, 92);
-}
-
- /*cookies*/
-
- #consentBox {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    position: fixed;
-    top: 50px;
-    left: 650px;
-    width: 500px;
-}
-
-#consentBox.hide {
-    opacity: 0;
-    pointer-events: none;
-    transform: scale(0.8);
-    transition: all 0.3s ease;
-}
-
-#consentContent p {
-    color: #858585;
-    margin: 10px 0 20px 0;
-}
-
-#consentContent .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.consentButton,
-.rejectButton {
-    padding: 12px 30px;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.consentButton {
-    background: #e73d5c;
-    margin-right: 10px;
-}
-
-.rejectButton {
-    color: #111211;
-    background: transparent;
-    border: 2px solid #e73d5c;
-    text-decoration: none;
-}
-
-#consentBox img {
-    max-width: 90px;
-}
-
-#consentHeader {
-    font-size: 25px;
-    font-weight: 600;
-    margin-top: 10px;
-    width: auto;
-    background-color: transparent;
-}
-
-/* Form CCS */
-
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-
-  input[type=email], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-
-  input[type=number], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #0a5a83;
-    color: white;
-    padding: 14px 22px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: opacity 0.5s
-  }
-
-  #pest {
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid #ccc ;
-  }
-
-  input[type=submit]:hover{
-    opacity: 75%;
-  }
-  
-  input[type=submit]:active {
-    background-color: #ffffff;
-    color: #0a5a83;
-    border-color: #0a5a83;
-    border:solid ;
-    border-width: 1px;
-    box-shadow: #333;
-    padding: 10px 18px;
-    /*font-weight: bold;*/
-
-  }
-  
-  /* Add a background color and some padding around the form */
-  #contact-form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    font-weight: bold;
-  }
-
-/* radio button */
-
-.radio-cont{
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-weight: 400;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Hide the browser's default radio button */
-  .radio-cont input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* Create a custom radio button */
-  .radio {
-    position: absolute;
-    top: 3px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #eee;
-    border-radius: 50%;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .radio-cont:hover input ~ .radio {
-    background-color: #ccc;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .radio-cont input:checked ~ .radio {
-    background-color: #0a5a83;
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .radio:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .radio-cont input:checked ~ .radio:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .radio-cont .radio:after {
-       top: 7px;
-      left: 7px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: white;
-  }
-  
-  /* Base styles for the container */
-.container {
-  display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-  flex-wrap: wrap; /* Allow items to wrap if necessary */
-}
-
-/* Navbar styles */
-#norse-nav {
-  display: flex; /* Keep items horizontal on larger screens */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items horizontally */
-      text-align: center; /* Center text */
-  }
-  
-
-  #norse-nav {
-      flex-direction: column; /* Stack nav items vertically */
-      width: 100%; /* Full width */
-      display: none; /* Hide by default */
-      margin-bottom: -5px ;
-  }
-
-  #norse-nav.active {
-      display: flex; /* Show when active */
-  }
-
-  #contact-btn {
-    margin-top: 10px; /* Space above button */
-    max-width: 300px; /* Set a max width for better appearance */
-    margin-left: 150px; /* Move 110px to the left */
-    margin-right: auto; /* Center horizontally */
-    display: block; /* Ensure it's a block element */
-}
-
-.nav-item:hover {
-  color: rgb(255, 255, 255); /* Change text color on hover */
-}
-
-/* Logo centered on mobile */
-#norse-logo {
-    margin: 10px auto; /* Center logo horizontally */
-    display: block; /* Ensure it’s a block element */
-    position: relative;
-    left: 0;
-}
-
-/* Norse navigation links */
-.nav-item {
-  text-align: center; /* Center text for nav items */
-  padding: 10px; /* Adjust padding for spacing */
-  background-color: #e73d5c; /* Maintain background color */
-  color: white; /* Ensure text is white for readability */
-  width: 105%; /* Full width */
-  box-sizing: border-box; /* Include padding in width */
-  margin: 0; /* Remove margin */
-  display: block; /* Make it a block element */
-  position: relative; /* Ensure relative positioning */
-  left: -11px; /* Reset left positioning */
-  top: 10px;
-}
-
-/* Hamburger menu positioning */
-.hamburger {
-    display: block; /* Show on mobile */
-    cursor: pointer;
-    font-size: 24px; /* Size of the hamburger icon */
-    margin: 10px; /* Margin for spacing */
-    color: white; /* Hamburger color */
-    position: absolute; /* Position it at the top left */
-    top: 10px; /* Position from the top */
-    left: 10px; /* Position from the left */
-}
-
-
-.nav-item .fa {
-  color: rgb(255, 255, 255); /* Icon color */
-  padding: 3px; /* Padding around the icon */
-  border-radius: 50%; /* Round icon background */
-  transition: background-color 0.1s; /* Smooth transition for background */
-  background-color: #e73d5c; /* Background color for icon */
-  border: none;
-}
-
-.nav-item:hover .fa {
-  background-color: #e73d5c; /* Change background color on hover */
-}
-
-#medway-header {
-  top: 20px; /* Adjust top spacing for mobile view */
-  right: 20px;
-  margin-bottom: 20px;
-}
-
-#medway-logo {
-  top: 10px; /* Adjust top spacing for mobile view */
-  width: 150px; /* Adjust logo width if needed */
-  right: 220px;
-  padding-bottom: 20px;
-  padding-top: 10px;
-}
-
-#nav-link {
-  padding-right: 20px;
-  position: relative;
-  left: 0; /* Set to 0 to align with the left */
-  margin-left: 0px; /* Add some margin from the left edge */
-}
-
-#medway-nav {
-  display: flex; /* Use flexbox to align items in a row */
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center; /* Center items vertically */
-  background-color: rgb(242, 242, 243);
-  font-weight: bold;
-  padding: 20px 40px;
-  flex-wrap: nowrap; /* Prevent wrapping */
-  white-space: nowrap;
-}
-}
-
-@media(min-width: 768px) {
-.hamburger{
-  display: none;
-}
-}
-
-#medway-header {
-  color: #ffffff;
-  font-size: 48px;
-  position: relative;
-  top: 50px;
-}
-
-body {
-  margin: 0px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
-  color: #333;
-}
-
-h2 {
-text-align: center;
-}
-
-p {
-text-align: center;
-}
-
-header {
-  background-color: #0a5a83; /* Blue */
-}
-
-nav a {
-  color: rgb(12, 11, 11);
-  text-decoration: none;
-  padding: 8px;
-}
-
-nav a:hover {
-  color: #79b3f0; /* light blue */
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #0a5a83;
-  color: white;
-  margin-top: 150px;
-  position: static;
-  bottom: 0px;
-}
-
-#medway-logo{
-  position: relative;
-  top: -40px;
-}
-
-#medway-banner {
-background-color: #0a5a83;
-color: #ffffff;
-font-size: 48px;
-padding: 5px;
-}
-
-#medway-nav {
-  background-color: rgb(242, 242, 243);
-  font-weight: bold;
-  padding: 20px 40px;
-}
-
-#nav-link {
-padding-right:20px;
-position: relative;
-left: 100px;
-}
-
-#norse-banner {
-  background-color: #47525e ;
-  color: white;
-  padding-bottom: 15px;
-}
-
-#norse-logo {
-  width: 200px;
-  position: relative;
-  right: 250px;
-}
-
-
-#norse-nav {
-display: flex;
-justify-content: flex-start; /* Align items to the left */
-padding: 0; /* Remove padding if any */
-margin: 0; /* Remove margin */
-}
-
-.nav-item {
-display: flex;
-align-items: center; /* Align text and icon vertically */
-padding: 10px 15px; /* Adjust padding for spacing */
-text-decoration: none; /* Remove underline */
-font-weight: 500;
-color: #ffffff; /* Default text color */
-transition: color 0.3s; /* Smooth transition for text color */
-white-space: nowrap; /* Prevent text wrapping */
-margin: 0; /* Remove margin */
-position: relative;
-right: 250px;
-}
-
-.nav-item .fa {
-color: rgb(231, 61, 92); /* Icon color */
-padding: 3px; /* Padding around the icon */
-border-radius: 50%; /* Round icon background */
-transition: background-color 0.1s; /* Smooth transition for background */
-background-color: #47525e; /* Background color for icon */
-border: none;
-}
-
-.nav-item:hover {
-color: rgb(231, 61, 92); /* Change text color on hover */
-}
-
-.nav-item:hover .fa {
-background-color: #88919b; /* Change background color on hover */
-}
-
-
-#contact-btn {
   font-weight: bold;
   padding: 18px 27px;
   border-radius: 0px 15px;
@@ -617,13 +136,13 @@ background-color: #88919b; /* Change background color on hover */
   position: relative;
   left: 10px;
 }
+
 #contact-btn:hover {
   background-color: white;
   color: rgb(231, 61, 92);
 }
 
-/*cookies*/
-
+/* Cookies */
 #consentBox {
   background: #fff;
   padding: 20px;
@@ -692,44 +211,18 @@ background-color: #88919b; /* Change background color on hover */
   background-color: transparent;
 }
 
-/* Form CCS */
-
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
+/* Form CSS */
+input[type=text], input[type=email], input[type=number], select, textarea {
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
+  padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-input[type=email], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-input[type=number], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-
-/* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: #0a5a83;
   color: white;
@@ -737,10 +230,10 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: opacity 0.5s
+  transition: opacity 0.5s;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover {
   opacity: 75%;
 }
 
@@ -748,15 +241,13 @@ input[type=submit]:active {
   background-color: #ffffff;
   color: #0a5a83;
   border-color: #0a5a83;
-  border:solid ;
+  border: solid;
   border-width: 1px;
   box-shadow: #333;
   padding: 11px 19px;
   font-weight: bold;
-
 }
 
-/* Add a background color and some padding around the form */
 #contact-form {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -764,9 +255,8 @@ input[type=submit]:active {
   font-weight: bold;
 }
 
-/* radio button */
-
-.radio-cont{
+/* Radio button */
+.radio-cont {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -779,14 +269,12 @@ input[type=submit]:active {
   user-select: none;
 }
 
-/* Hide the browser's default radio button */
 .radio-cont input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-/* Create a custom radio button */
 .radio {
   position: absolute;
   top: 3px;
@@ -797,178 +285,158 @@ input[type=submit]:active {
   border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
 .radio-cont:hover input ~ .radio {
   background-color: #ccc;
 }
 
-/* When the radio button is checked, add a blue background */
 .radio-cont input:checked ~ .radio {
   background-color: #0a5a83;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .radio:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .radio-cont input:checked ~ .radio:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .radio-cont .radio:after {
-     top: 7px;
-    left: 7px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: white;
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
 }
 
 /* Base styles for the container */
 .container {
-display: flex;
-align-items: center; /* Center items vertically */
-justify-content: center; /* Center items horizontally */
-flex-wrap: wrap; /* Allow items to wrap if necessary */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
 }
 
 .main {
-padding-top: 15px;
-}
-
-/* Navbar styles */
-#norse-nav {
-display: flex; /* Keep items horizontal on larger screens */
-padding: 0; /* Remove padding */
-margin: 0; /* Remove margin */
+  padding-top: 15px;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-.container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text */
+  .container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text */
+  }
+
+  #norse-nav {
+      flex-direction: column; /* Stack nav items vertically */
+      width: 100%; /* Full width */
+      display: none; /* Hide by default */
+      margin-bottom: -5px;
+  }
+
+  #norse-nav.active {
+      display: flex; /* Show when active */
+  }
+
+  #contact-btn {
+      margin-top: 10px; /* Space above button */
+      max-width: 300px; /* Set a max width for better appearance */
+      margin-left: 150px; /* Move 110px to the left */
+      margin-right: auto; /* Center horizontally */
+      display: block; /* Ensure it's a block element */
+  }
+
+  .nav-item:hover {
+      color: rgb(255, 255, 255); /* Change text color on hover */
+  }
+
+  #norse-logo {
+      margin: 10px auto; /* Center logo horizontally */
+      display: block; /* Ensure it’s a block element */
+      position: relative;
+      left: 0;
+  }
+
+  .nav-item {
+      text-align: center; /* Center text for nav items */
+      padding: 10px; /* Adjust padding for spacing */
+      background-color: #e73d5c; /* Maintain background color */
+      color: white; /* Ensure text is white for readability */
+      width: 105%; /* Full width */
+      box-sizing: border-box; /* Include padding in width */
+      margin: 0; /* Remove margin */
+      display: block; /* Make it a block element */
+      position: relative; /* Ensure relative positioning */
+      left: -11px; /* Reset left positioning */
+      top: 10px;
+  }
+
+  .hamburger {
+      display: block; /* Show on mobile */
+      cursor: pointer;
+      font-size: 24px; /* Size of the hamburger icon */
+      margin: 10px; /* Margin for spacing */
+      color: white; /* Hamburger color */
+      position: absolute; /* Position it at the top left */
+      top: 10px; /* Position from the top */
+      left: 10px; /* Position from the left */
+  }
+
+  .nav-item .fa {
+      color: rgb(255, 255, 255); /* Icon color */
+      padding: 3px; /* Padding around the icon */
+      border-radius: 50%; /* Round icon background */
+      transition: background-color 0.1s; /* Smooth transition for background */
+      background-color: #e73d5c; /* Background color for icon */
+      border: none;
+  }
+
+  .nav-item:hover .fa {
+      background-color: #e73d5c; /* Change background color on hover */
+  }
+
+  #medway-header {
+      top: 20px; /* Adjust top spacing for mobile view */
+      right: 20px;
+      margin-bottom: 20px;
+  }
+
+  #medway-logo {
+      top: 10px; /* Adjust top spacing for mobile view */
+      width: 150px; /* Adjust logo width if needed */
+      right: 220px;
+      padding-bottom: 20px;
+      padding-top: 10px;
+  }
+
+  #nav-link {
+      padding-right: 20px;
+      position: relative;
+      left: 0; /* Set to 0 to align with the left */
+      margin-left: 0px; /* Add some margin from the left edge */
+  }
+
+  #medway-nav {
+      display: flex; /* Use flexbox to align items in a row */
+      justify-content: flex-start; /* Align items to the left */
+      align-items: center; /* Center items vertically */
+      background-color: rgb(242, 242, 243);
+      font-weight: bold;
+      padding: 20px 40px;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      white-space: nowrap;
+  }
 }
 
-#norse-nav {
-    flex-direction: column; /* Stack nav items vertically */
-    width: 100%; /* Full width */
-    display: none; /* Hide by default */
-    margin-bottom: -5px ;
-}
-
-#norse-nav.active {
-    display: flex; /* Show when active */
-}
-
-#contact-btn {
-  margin-top: 10px; /* Space above button */
-  max-width: 300px; /* Set a max width for better appearance */
-  margin-left: 150px; /* Move 110px to the left */
-  margin-right: auto; /* Center horizontally */
-  display: block; /* Ensure it's a block element */
-}
-
-#medway-banner #medway-header {
-  position: sticky;
-}
-
-.nav-item:hover {
-color: rgb(255, 255, 255); /* Change text color on hover */
-}
-
-/* Logo centered on mobile */
-#norse-logo {
-  margin: 10px auto; /* Center logo horizontally */
-  display: block; /* Ensure it’s a block element */
-  position: relative;
-  left: 0;
-}
-
-/* Norse navigation links */
-.nav-item {
-text-align: center; /* Center text for nav items */
-padding: 10px; /* Adjust padding for spacing */
-background-color: #e73d5c; /* Maintain background color */
-color: white; /* Ensure text is white for readability */
-width: 105%; /* Full width */
-box-sizing: border-box; /* Include padding in width */
-margin: 0; /* Remove margin */
-display: block; /* Make it a block element */
-position: relative; /* Ensure relative positioning */
-left: -11px; /* Reset left positioning */
-top: 10px;
-}
-
-/* Hamburger menu positioning */
-.hamburger {
-  display: block; /* Show on mobile */
-  cursor: pointer;
-  font-size: 24px; /* Size of the hamburger icon */
-  margin: 10px; /* Margin for spacing */
-  color: white; /* Hamburger color */
-  position: absolute; /* Position it at the top left */
-  top: 10px; /* Position from the top */
-  left: 10px; /* Position from the left */
-}
-
-
-.nav-item .fa {
-color: rgb(255, 255, 255); /* Icon color */
-padding: 3px; /* Padding around the icon */
-border-radius: 50%; /* Round icon background */
-transition: background-color 0.1s; /* Smooth transition for background */
-background-color: #e73d5c; /* Background color for icon */
-border: none;
-}
-
-.nav-item:hover .fa {
-background-color: #e73d5c; /* Change background color on hover */
-}
-
-#medway-header {
-top: 20px; /* Adjust top spacing for mobile view */
-right: 20px;
-margin-bottom: 20px;
-}
-
-#medway-logo {
-top: 10px; /* Adjust top spacing for mobile view */
-width: 150px; /* Adjust logo width if needed */
-right: 220px;
-padding-bottom: 20px;
-padding-top: 10px;
-}
-
-#nav-link {
-padding-right: 20px;
-position: relative;
-left: 0; /* Set to 0 to align with the left */
-margin-left: 0px; /* Add some margin from the left edge */
-}
-
-#medway-nav {
-display: flex; /* Use flexbox to align items in a row */
-justify-content: flex-start; /* Align items to the left */
-align-items: center; /* Center items vertically */
-background-color: rgb(242, 242, 243);
-font-weight: bold;
-padding: 20px 40px;
-flex-wrap: nowrap; /* Prevent wrapping */
-white-space: nowrap;
-}
-}
-
-@media(min-width: 768px) {
-.hamburger{
-display: none;
-}
+@media (min-width: 768px) {
+  .hamburger {
+      display: none;
+  }
 }
 
 .contact-icon {
@@ -1041,20 +509,15 @@ display: none;
 
 .trustmark {
   float: left;
-width: 76px;
-position: relative;
-bottom: 18px;
-margin-right: 25px;
+  width: 76px;
+  position: relative;
+  bottom: 18px;
+  margin-right: 25px;
 }
 
 .copyright {
   position: relative;
   left: -150px;
-}
-
-footer {
-  position: relative;
-  bottom: -15px;
 }
 
 .contact-tile {
@@ -1098,7 +561,7 @@ footer {
   left: -62%;
   transform: translateY(-50%);
   width: 275px;
-  height: 275px; 
+  height: 275px;
   background-color: #f7f7f7;
   border: 2px solid #000;
   border-radius: 0 8px 8px 0;
@@ -1111,4 +574,65 @@ footer {
 
 .map-tile iframe {
   border-radius: 0 8px 8px 0;
+}
+
+.services-contact-tile {
+  position: relative;
+  top: 175px;
+  right: -675px;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 270px;
+  color: #fff;
+  background-color: #0a5a83;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.services-contact-item {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.services-contact-item:hover {
+  color: #79b3f0;
+  text-decoration: underline;
+}
+
+.faq {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #0a5a83;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #444;
+  outline: none;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: #555;
+  padding-left: 15px;
+  text-align: center;
 }
