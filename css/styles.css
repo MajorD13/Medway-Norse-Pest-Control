@@ -32,16 +32,16 @@ nav a:hover {
 
 footer {
   text-align: center;
-  padding: 20px;
   background-color: #0a5a83;
   color: white;
   position: fixed; /* Stick the footer to the bottom */
   bottom: 0;       /* Align it to the bottom */
   left: 0;
+  margin-top: 100px;
   width: 100%;     /* Full width of the page */
   z-index: 10;     /* Ensure it overlays correctly */
-  position: relative; 
-  top: 100px;/* Make footer a positioned container */
+  position: relative; /* Make footer a positioned container */
+  display: flex;
 }
 
 #medway-logo {
@@ -60,6 +60,7 @@ footer {
   background-color: rgb(242, 242, 243);
   font-weight: bold;
   padding: 20px 40px;
+  margin-bottom: 50px;
 }
 
 #nav-link {
@@ -82,8 +83,8 @@ footer {
 #norse-logo {
   width: 200px;
   position: relative;
-  right: -675px;
-  bottom: 55px;
+  top: -35px;
+  right: 20px;
 }
 
 #norse-nav {
@@ -324,121 +325,6 @@ input[type=submit]:active {
   padding-top: 15px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items horizontally */
-      text-align: center; /* Center text */
-  }
-
-  #norse-nav {
-      flex-direction: column; /* Stack nav items vertically */
-      width: 100%; /* Full width */
-      display: none; /* Hide by default */
-      margin-bottom: -5px;
-  }
-
-  #norse-nav.active {
-      display: flex; /* Show when active */
-  }
-
-  #contact-btn {
-      margin-top: 10px; /* Space above button */
-      max-width: 300px; /* Set a max width for better appearance */
-      margin-left: 150px; /* Move 110px to the left */
-      margin-right: auto; /* Center horizontally */
-      display: block; /* Ensure it's a block element */
-  }
-
-  .nav-item:hover {
-      color: rgb(255, 255, 255); /* Change text color on hover */
-  }
-
-  #norse-logo {
-      margin: 10px auto; /* Center logo horizontally */
-      display: block; /* Ensure it’s a block element */
-      position: relative;
-      left: 0;
-  }
-
-  .nav-item {
-      text-align: center; /* Center text for nav items */
-      padding: 10px; /* Adjust padding for spacing */
-      background-color: #e73d5c; /* Maintain background color */
-      color: white; /* Ensure text is white for readability */
-      width: 105%; /* Full width */
-      box-sizing: border-box; /* Include padding in width */
-      margin: 0; /* Remove margin */
-      display: block; /* Make it a block element */
-      position: relative; /* Ensure relative positioning */
-      left: -11px; /* Reset left positioning */
-      top: 10px;
-  }
-
-  .hamburger {
-      display: block; /* Show on mobile */
-      cursor: pointer;
-      font-size: 24px; /* Size of the hamburger icon */
-      margin: 10px; /* Margin for spacing */
-      color: white; /* Hamburger color */
-      position: absolute; /* Position it at the top left */
-      top: 10px; /* Position from the top */
-      left: 10px; /* Position from the left */
-  }
-
-  .nav-item .fa {
-      color: rgb(255, 255, 255); /* Icon color */
-      padding: 3px; /* Padding around the icon */
-      border-radius: 50%; /* Round icon background */
-      transition: background-color 0.1s; /* Smooth transition for background */
-      background-color: #e73d5c; /* Background color for icon */
-      border: none;
-  }
-
-  .nav-item:hover .fa {
-      background-color: #e73d5c; /* Change background color on hover */
-  }
-
-  #medway-header {
-      top: 20px; /* Adjust top spacing for mobile view */
-      right: 20px;
-      margin-bottom: 20px;
-  }
-
-  #medway-logo {
-      top: 10px; /* Adjust top spacing for mobile view */
-      width: 150px; /* Adjust logo width if needed */
-      right: 220px;
-      padding-bottom: 20px;
-      padding-top: 10px;
-  }
-
-  #nav-link {
-      padding-right: 20px;
-      position: relative;
-      left: 0; /* Set to 0 to align with the left */
-      margin-left: 0px; /* Add some margin from the left edge */
-  }
-
-  #medway-nav {
-      display: flex; /* Use flexbox to align items in a row */
-      justify-content: flex-start; /* Align items to the left */
-      align-items: center; /* Center items vertically */
-      background-color: rgb(242, 242, 243);
-      font-weight: bold;
-      padding: 20px 40px;
-      flex-wrap: nowrap; /* Prevent wrapping */
-      white-space: nowrap;
-  }
-}
-
-@media (min-width: 768px) {
-  .hamburger {
-      display: none;
-  }
-}
-
 .contact-icon {
   display: none;
 }
@@ -495,35 +381,25 @@ input[type=submit]:active {
   font-size: 1.8rem;
 }
 
-@media (max-width: 768px) {
-  .img-container {
-      grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .img-container {
-      grid-template-columns: 1fr;
-  }
-}
-
 .trustmark {
   float: left;
   width: 76px;
   position: relative;
-  bottom: 18px;
+  bottom: 100px;
+  left: -600px;
   margin-right: 25px;
 }
 
 .copyright {
   position: relative;
-  left: -150px;
+  left: 100px;
+  bottom: -120px;
 }
 
 .contact-tile {
-  position: fixed;
-  top: 77.4%;
-  right: 0;
+  position: relative;
+  top: -230px;
+  right: -950px;
   transform: translateY(-50%);
   width: 270px;
   height: 500px;
@@ -558,7 +434,7 @@ input[type=submit]:active {
 .map-tile {
   position: relative;
   top: -390px;
-  left: -62%;
+  left: -945px;
   transform: translateY(-50%);
   width: 275px;
   height: 275px;
@@ -578,7 +454,7 @@ input[type=submit]:active {
 
 .services-contact-tile {
   position: relative;
-  top: 175px;
+  top: 200px;
   right: -675px;
   transform: translateY(-50%);
   width: 500px;
@@ -635,4 +511,47 @@ input[type=submit]:active {
   color: #555;
   padding-left: 15px;
   text-align: center;
+}
+
+.abt-us-img {
+  height: 105px;
+  margin-right: 50px;
+  margin-bottom: 55px;
+  position: relative;
+}
+
+.rsph {
+  height: 150px;
+  position: relative;
+  top: -25px;
+  margin-right: 20px;
+}
+
+.norse-address {
+  background-color: #47525e;
+  width: 250px;
+  height: 100%;
+  padding: 50px;
+  color: #fff;
+  display: flex;
+  white-space: nowrap;
+}
+
+.fa {
+color: #e73d5c;
+}
+
+.white-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.white-link:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  position: relative;
+  right: 215px;
+  top: 60px;
 }
