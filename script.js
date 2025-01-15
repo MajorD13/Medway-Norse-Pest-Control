@@ -31,3 +31,4 @@ function toggleNav() {
 // Update the current year in the footer
 let date = new Date().getFullYear();
 document.getElementById("currentYear").textContent = date;
+
