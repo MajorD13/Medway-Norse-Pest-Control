@@ -9,11 +9,12 @@ body {
   margin: 0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
-  color: #333;
+  color: #0a5a83;
 }
 
 h2, p {
   text-align: center;
+  color: #0a5a83;
 }
 
 header {
@@ -254,6 +255,7 @@ input[type=submit]:active {
   background-color: #f2f2f2;
   padding: 20px;
   font-weight: bold;
+  color: #000;
 }
 
 /* Radio button */
@@ -319,10 +321,12 @@ input[type=submit]:active {
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
   flex-wrap: wrap; /* Allow items to wrap if necessary */
+  color: #0a5a83;
 }
 
 .main {
   padding-top: 15px;
+  color: #0a5a83;
 }
 
 .contact-icon {
@@ -394,6 +398,7 @@ input[type=submit]:active {
   position: relative;
   left: 100px;
   bottom: -120px;
+  color: #fff;
 }
 
 .contact-tile {
@@ -409,6 +414,7 @@ input[type=submit]:active {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
   z-index: 1000;
+  color: #333;
 }
 
 .contact-item {
@@ -416,7 +422,7 @@ input[type=submit]:active {
   text-decoration: none;
   color: #333;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   overflow-wrap: break-word;
 }
@@ -439,7 +445,8 @@ input[type=submit]:active {
   width: 275px;
   height: 275px;
   background-color: #f7f7f7;
-  border: 2px solid #000;
+  color: #333;
+  border: 1px solid #333;
   border-radius: 0 8px 8px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -466,6 +473,8 @@ input[type=submit]:active {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
   z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
 .services-contact-item {
@@ -476,6 +485,8 @@ input[type=submit]:active {
   font-size: 14px;
   text-align: center;
   overflow-wrap: break-word;
+  justify-content: center;
+  align-items: center;
 }
 
 .services-contact-item:hover {
@@ -487,9 +498,10 @@ input[type=submit]:active {
   max-width: 1200px;
   margin: 50px auto;
   padding: 20px;
-  background: #fff;
+ /* background: #f2f2f2;*/
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: #ccc 1px solid;
 }
 
 .faq-item {
@@ -509,8 +521,11 @@ input[type=submit]:active {
 .faq-answer {
   margin-top: 10px;
   color: #555;
-  padding-left: 15px;
+  padding: 15px;
   text-align: center;
+ /* background-color: #fff;
+  border: #333 1px solid;
+  border-radius: 10px;*/
 }
 
 .abt-us-img {
@@ -554,4 +569,172 @@ color: #e73d5c;
   position: relative;
   right: 215px;
   top: 60px;
+}
+
+.rat1 {
+  height: 300px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -375px;
+  display: block;
+  line-height: 0;
+}
+
+.rat2 {
+  clip-path: circle(37%);
+  shape-outside: circle(42%);
+  float: left;
+  position: absolute;
+  top: -590px;
+  right: -660px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.rat3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.rat4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: 0px;
+  width: 450px;
+  display: block;
+  line-height: 0;
+}
+
+.mouse1 {
+  height: 200px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -375px;
+  display: block;
+  line-height: 0;
+}
+
+.mouse2 {
+  clip-path: circle(37%);
+  shape-outside: circle(42%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -620px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.mouse3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.mouse4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: 50px;
+  width: 500px;
+  display: block;
+  line-height: 0;
+}
+
+.bedbug1 {
+  height: 200px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.bedbug2 {
+  clip-path: circle(37%);
+  shape-outside: circle(42%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -620px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.bedbug3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.bedbug4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -50px;
+  width: 500px;
+  display: block;
+  line-height: 0;
+}
+
+.flies1 {
+  height: 200px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.flies2 {
+  clip-path: circle(32%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -660px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.flies3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.flies4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -50px;
+  width: 450px;
+  display: block;
+  line-height: 0;
 }
