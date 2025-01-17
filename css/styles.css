@@ -8,7 +8,7 @@
 body {
   margin: 0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
+  background-color: #f1f1f1;
   color: #0a5a83;
 }
 
@@ -73,6 +73,14 @@ footer {
 .footer-center {
   text-align: center;
   margin: auto;
+  width: 250px;
+  position: relative;
+  right: 322px;
+}
+
+#tm-web {
+  background-color: #fff;
+ /* border-top: #0a5a83 2px solid;*/
 }
 
 #norse-banner {
@@ -341,7 +349,7 @@ input[type=submit]:active {
   width: 80%;
   max-width: 1200px;
   padding: 20px;
-  background: #fff;
+  background: #f1f1f1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   left: 350px;
@@ -386,19 +394,28 @@ input[type=submit]:active {
 }
 
 .trustmark {
-  float: left;
+  flex-direction: column;
   width: 76px;
+  margin-bottom: 25px;
+  display: flex;
+  bottom: -10px;
+  left: 15px ;
   position: relative;
-  bottom: 100px;
-  left: -600px;
-  margin-right: 25px;
+}
+
+#tm-link {
+  color: #0a5a83;
+  text-decoration: none;
+  position: relative;
+  left: 47px;
+  bottom: 55px;
 }
 
 .copyright {
   position: relative;
-  left: 100px;
-  bottom: -120px;
+  bottom: -540px;
   color: #fff;
+  left: -115px;
 }
 
 .contact-tile {
@@ -545,11 +562,46 @@ input[type=submit]:active {
 .norse-address {
   background-color: #47525e;
   width: 250px;
-  height: 100%;
   padding: 50px;
   color: #fff;
   display: flex;
   white-space: nowrap;
+}
+
+.medway-address {
+  background-color: #28b4e4;
+  width: 250px;
+  padding: 50px;
+  color: #fff;
+  display: flex;
+  white-space: nowrap;
+}
+
+.medway-address1 {
+  background-color: #28b4e4;
+  width: 250px;
+  padding: 50px;
+  color: #fff;
+  display: flex;
+  white-space: nowrap;
+}
+
+#medway-logo1 {
+  position: relative;
+  top: -40px;
+  right: -90px;
+}
+
+#medway-email {
+  position: relative;
+  right: -150px;
+  top: -25px;
+}
+
+#stoney-lane {
+  position: relative;
+  right: -140px;
+  top: -25px;
 }
 
 .fa {
@@ -735,6 +787,426 @@ color: #e73d5c;
   left: -650px;
   top: -50px;
   width: 450px;
+  display: block;
+  line-height: 0;
+}
+
+.fleas1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.fleas2 {
+  clip-path: circle(35%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -520px;
+  right: -660px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.fleas3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.fleas4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -50px;
+  width: 450px;
+  display: block;
+  line-height: 0;
+}
+
+.pigeon1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.pigeon2 {
+  clip-path: circle(33%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -520px;
+  right: -675px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.pigeon3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.pigeon4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -50px;
+  width: 450px;
+  display: block;
+  line-height: 0;
+}
+
+.beetle1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.beetle2 {
+  clip-path: circle(33%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -520px;
+  right: -675px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.beetle3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.beetle4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.ant1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.ant2 {
+  clip-path: circle(33%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -590px;
+  right: -650px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.ant3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.ant4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.roach1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.roach2 {
+  clip-path: circle(35%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.roach3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.roach4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.squirrel1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.squirrel2 {
+  clip-path: circle(35%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.squirrel3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.squirrel4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.silverfish1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.silverfish2 {
+  clip-path: circle(35%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.silverfish3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.silverfish4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.moth1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.moth2 {
+  clip-path: circle(45%);
+  shape-outside: circle(50%);
+  float: left;
+  position: absolute;
+  top: -420px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.moth3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.moth4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.wasp1 {
+  height: 200px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.wasp2 {
+  clip-path: circle(45%);
+  shape-outside: circle(50%);
+  float: left;
+  position: absolute;
+  top: -450px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.wasp3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.wasp4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 500px;
+  display: block;
+  line-height: 0;
+}
+
+.exterm1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -665px;
+  top: -780px;
+  display: block;
+  line-height: 0;
+}
+
+.exterm2 {
+  clip-path: circle(37%);
+  shape-outside: circle(42%);
+  float: left;
+  position: absolute;
+  top: -1300px;
+  right: -670px;
+  height: 270px;
+  display: block;
+  line-height: 0;
+}
+
+.exterm3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.exterm4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 500px;
   display: block;
   line-height: 0;
 }
