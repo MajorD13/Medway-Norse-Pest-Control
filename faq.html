@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medway Norse Pest Control - Home</title>
-    <link rel="stylesheet" href="css/styles.css">
+        <!-- Default (base) CSS -->
+         <link rel="stylesheet" href="css/styles-mobile.css">
+
+        <!-- For screens wider than 768px (Tablet & larger devices) -->
+         <link rel="stylesheet" href="css/styles-tablet.css" media="(min-width: 768px)">
+    
+        <!-- For screens wider than 1024px (Desktop & larger devices) -->
+        <link rel="stylesheet" href="css/styles.css" media="(min-width: 1024px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -18,13 +25,14 @@
     
     <header id="medway-banner">
         <div class="container">
+            <img class="col-lg-offset-10" id="medway-logo" src="images/Medway-Rev.png" alt="medway norse logo">
             <h1 class="col" id="medway-header">Medway Norse<br>Pest Control</h1>
-            <img class="col offset-10" id="medway-logo" src="images/Medway-Rev.png" alt="medway norse logo">
+            <img class="rat" src="images/rat-ca.png" alt="pest">
         </div>
     </header>
     <span id="pest-nav">
         <nav id="medway-nav">
-            <a class="col offset-1" id="nav-link" href="index.html">Home</a>
+            <a id="nav-link" href="index.html">Home</a>
             <a id="nav-link" href="about.html">About</a>
             <a id="nav-link" href="services.html">Services</a>
             <a id="nav-link" href="contact-us.html">Contact Us</a>
@@ -108,82 +116,87 @@
                  Our technicians are highly trained and certified.</div>
         </details>
     </div>
-    <footer>
-        <div class="footer-center" id="tm-web">
-            <a href="https://bpca.org.uk/">
-            <img class="trustmark" src="images/BPCA-member-logo.jpg" alt="BPCA Member Logo">
-            <p id="tm-link">BPCA</p></a>
-            <a href="https://www.rsph.org.uk/">
-            <img class="trustmark" src="images/RSPH.png" alt="RSPH Logo">
-            <p id="tm-link">RSPH</p></a>
-            <a href="https://www.trustmark.org.uk/homeowner">
-            <img class="trustmark" src="images/trustmark-logo.png" alt="Trustmark Logo">
-            <p id="tm-link">TrustMark </p></a>
-            <a href="https://www.medway.gov.uk/">
-            <img class="trustmark" src="images/Medway_Council.png" alt="Medway-council">
-            <p id="tm-link">Medway Council</p></a>
-        </div>
-        <div class="useful-links">
-            <a id="nav-link1" href="index.html">• Home</a>
-            <a id="nav-link1" href="about.html">• About</a>
-            <a id="nav-link1" href="services.html">• Services</a>
-            <a id="nav-link1" href="contact-us.html">• Contact Us</a>
-            <a id="nav-link1" href="faq.html">• FAQ</a>   
-        </div>
-        <div class="useful-links1">
-            <p class="link-header">
-                Useful Links
-            </p>
-            <a id="nav-link2" href="Rats.html">• Rats</a>
-            <a id="nav-link2" href="Mice.html">• Mice</a>
-            <a id="nav-link2" href="pigeon.html">• Bird Control</a>
-            <a id="nav-link2" href="fleas.html">• Fleas</a>
-            <a id="nav-link2" href="other.html">• Other Services</a> 
-        </div>
-        <div>
-            <p class="copyright">&copy; 2024 Medway Norse Pest Control</p>
-        </div>
-        <div class="medway-address">
-            <a href="index.html">
-            <img id="medway-logo1" src="images/Medway-Rev.png" alt="Medway Norse Logo">
-            </a>
-            <p class="contact-info">
-                <i class="fa fa-map-marker" id="pier-address" aria-hidden="true" style="color: #fff;"></i>
-                <a class="white-link" id="pier-address" style="position:relative; z-index:10"
-                 href="https://www.google.com/maps/place/Pier+Approach+Rd,+Gillingham+ME7+1RX/@51.3981421,0.55482,692m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47d8cd88dac934e5:0x397759589bfd962!8m2!3d51.3981421!4d0.55482!16s%2Fg%2F11y8wbdbtc?entry=ttu&g_ep=EgoyMDI1MDExNC4wIKXMDSoASAFQAw%3D%3D">
-                    Pier Approach Rd<br>
-    Gillingham<br>
-    Kent<br>
-    ME7 1RT<br><br></a>
-    <i class="fa fa-phone" id="medway-phone" aria-hidden="true" style="color: #fff;"></i><a style="position:relative; z-index:10" class="white-link" id="medway-phone" href="tel:01634283210"> 01634 283210</a><br><br>
-            </p>
-            </div>    
-            <div class="medway-address1">
-                <p class="contact-info">
-                    <br><i class="fa fa-map-marker" id="stoney-lane" aria-hidden="true" style="color: #fff;"></i>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1: Images and Anchors -->
+            <div class="footer-col trustmarks-container">
+                <a class="trustmark" href="https://bpca.org.uk/"><img class="trustmark" src="images/BPCA-member-logo-rgb.jpg" alt="BPCA logo"><p class="tm">BPCA<br>Official<br>Website</p></a>
+                <a class="trustmark" href="https://www.rsph.org.uk/"><img class="trustmark" src="images/RSPH-rgb1.png" alt="RSPH Logo"><p class="tm">RSPH<br>Official<br>Website</p></a>
+                <a class="trustmark" href="https://www.trustmark.org.uk/homeowner"><img class="trustmark" src="images/trustmark-logo.png" alt="Trustmark Logo"><p class="tm">TrustMark<br>Official<br>Website</p></a>
+                <a class="trustmark" href="https://www.medway.gov.uk/"><img class="trustmark" src="images/Medway_Council.png" alt="Medway-council"><p class="tm">Medway<br>Council<br>Official<br>Website</p></a>
+            </div>
+    
+            <!-- Column 2: Contact Information -->
+            <div class="footer-col">
+                <a href="index.html"><img class="medway-logo1" src="images/Medway-Rev.png"></a>
+                <p id="medway-email"><i class="fa fa-envelope" aria-hidden="true" style="color: #fff;"></i><a id="medway-email" class="white-link" href="mailto:medwaynorse@ncsgrp.co.uk"> medwaynorse@ncsgrp.co.uk</a><br><br>
+                </p>
+                <p id="pier-address"> <i class="fa fa-map-marker" aria-hidden="true" style="color: #fff;"></i>
+                    <a class="white-link" id="pier-address" style="position:relative; z-index:10"
+                     href="https://www.google.com/maps/place/Pier+Approach+Rd,+Gillingham+ME7+1RX/@51.3981421,0.55482,692m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47d8cd88dac934e5:0x397759589bfd962!8m2!3d51.3981421!4d0.55482!16s%2Fg%2F11y8wbdbtc?entry=ttu&g_ep=EgoyMDI1MDExNC4wIKXMDSoASAFQAw%3D%3D">
+                        <br>Pier Approach Rd<br>
+        Gillingham<br>
+        Kent<br>
+        ME7 1RT<br><br></a></p>
+            </div>
+    
+            <!-- Column 3: Contact Information -->
+            <div class="footer-col">
+                <p id="medway-phone">    <i class="fa fa-phone" aria-hidden="true" style="color: #fff;"><br></i><a style="position:relative; z-index:10" class="white-link" id="medway-phone" href="tel:01634283210"><br> 01634 283210</a><br><br>
+                </p>
+                <p id="stoney-lane"> <br><i class="fa fa-map-marker" aria-hidden="true" style="color: #fff;"></i>
                     <a class="white-link" id="stoney-lane" href="https://www.google.com/maps/place/Stoney+Ln,+Rochester/@51.354513,0.4923677,693m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47d8ccc8ed778095:0xee8e2dda1ee79bcc!8m2!3d51.354513!4d0.4949426!16s%2Fg%2F1tv23dtr?entry=ttu&g_ep=EgoyMDI1MDExNC4wIKXMDSoASAFQAw%3D%3D">
-                        Rochester Trade Park<br> Rochester Airport Industrial Estate<br> Maidstone Rd <br>
+                      <br> Stoney Lane<br> Maidstone Rd <br>
                         Chatham<br>
         Kent<br>
-        ME1 3QY<br><br></a>
-        <i class="fa fa-envelope" id="medway-email" aria-hidden="true" style="color: #fff;"></i><a id="medway-email" class="white-link" href="mailto:medwaynorse@ncsgrp.co.uk"> medwaynorse@ncsgrp.co.uk</a><br><br>
-               </p>
-                </div>  
-        <div class="norse-address">
-        <a href="https://norsegroup.co.uk/">
-        <img id="norse-logo" src="images/Norse_Group_logo.png" alt="Norse Group Logo">
-        </a>
-        <p class="contact-info">
-            <i class="fa fa-map-marker" id="norse-address" aria-hidden="true"></i>
-            <a class="white-link" id="norse-address" href="https://www.google.co.uk/maps/place/280+Fifers+Ln,+Norwich+NR6+6EQ/@52.6664906,1.2735206,17z/data=!3m1!4b1!4m6!3m5!1s0x47d9e18e34b8b6bb:0xfb6477561fcc68b3!8m2!3d52.6664906!4d1.2760955!16s%2Fg%2F11csnwvg6g?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D">
-                 280 Fifers Lane<br>
-Norwich<br>
-Norfolk<br>
-NR6 6EQ<br><br></a>
-<i class="fa fa-phone" id="norse-address" aria-hidden="true"></i><a class="white-link" id="norse-address" href="tel:01603894100"> 01603 894100</a><br><br>
-<i class="fa fa-envelope" id="norse-address" aria-hidden="true"></i><a class="white-link" id="norse-address" href="mailto:info@norsegroup.co.uk"> info@norsegroup.co.uk</a><br><br>
-        </p>
-        </div>    
+        ME1 3QY<br><br></a></p>
+            </div>
+    
+            <!-- Column 4: Blank Column -->
+            <div class="footer-colh"></div>
+    
+            <!-- Column 5: Parent Company Contact -->
+            <div class="footer-col">
+                <p><a href="https://norsegroup.co.uk/">
+                    <img id="norse-logo" src="images/Norse_Group_logo.png" alt="Norse Group Logo">
+                    </a></p>
+                <p id="norse-email"><i class="fa fa-envelope" aria-hidden="true"></i><a class="white-link" id="norse-address" href="mailto:info@norsegroup.co.uk"><br> info@norsegroup.co.uk</a></p>
+                <p id="norse-phone"><i class="fa fa-phone" aria-hidden="true"></i><a class="white-link" id="norse-address" href="tel:01603894100"><br> 01603 894100<br></a></p>
+                <p id="norse-address"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <a class="white-link" href="https://www.google.co.uk/maps/place/280+Fifers+Ln,+Norwich+NR6+6EQ/@52.6664906,1.2735206,17z/data=!3m1!4b1!4m6!3m5!1s0x47d9e18e34b8b6bb:0xfb6477561fcc68b3!8m2!3d52.6664906!4d1.2760955!16s%2Fg%2F11csnwvg6g?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D">
+                      <br>   280 Fifers Lane<br>
+            Norwich<br>
+            Norfolk<br>
+            NR6 6EQ<br><br></a></p>
+            </div>
+    
+            <!-- Column 6: Useful Links -->
+            <h5 id="link-title"><u>Useful Links</u></h5>
+            <div class="footer-col useful-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col useful-links1">
+                <ul>
+                    <li><a href="Rats.html">Rats</a></li>
+                    <li><a href="Mice.html">Mice</a></li>
+                    <li><a href="pigeon.html">Bird Control</a></li>
+                    <li><a href="fleas.html">Fleas</a></li>
+                    <li><a href="other.html">Other Services</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p id="copyright">&copy; <span id="currentYear"></span> Medway Norse Pest Control</p>
+        </div>
     </footer>
     <!--       cookies     --> 
     <div id="consentBox">
@@ -211,4 +224,4 @@ NR6 6EQ<br><br></a>
     <script src="script.js"></script>
     
     </body>
-</html>
+    </html>
