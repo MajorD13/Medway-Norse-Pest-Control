@@ -37,18 +37,104 @@
     color: #79b3f0; /* light blue */
   }
   
-  footer {
-    text-align: center;
-    background-color: #0a5a83;
-    color: white;
-    position: fixed; /* Stick the footer to the bottom */
-    bottom: 0;       /* Align it to the bottom */
-    left: 0;
-    margin-top: 100px;
-    width: 100%;     /* Full width of the page */
-    z-index: 10;     /* Ensure it overlays correctly */
-    position: relative; /* Make footer a positioned container */
+  .footer {
+    background-color: #47525e;
+    color: #fff;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes the copyright to the bottom */
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-grow: 1; /* Allows footer container to grow */
+  }
+  
+  /* Columns */
+  .footer-col {
+    flex: 1;
+    margin: 0 10px;
+    color: #fff;
+  }
+  
+  /* Column 1: Images and Anchors */
+  .footer-col img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact and Useful Links Styles */
+  .footer-col p, .footer-col ul {
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+  }
+  
+  .footer-col a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-col a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Bottom (Copyright) */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+    width: 100%;
+    background-color: #47525e; /* Same color as footer */
+    position: relative;
+    color: #fff;
+  }
+  
+  /* Responsive Design for Larger Screens */
+  @media (min-width: 1024px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px;
+    }
+  
+    .footer-col img {
+        width: auto;
+        height: auto;
+    }
+  
+    .footer-bottom {
+        margin-top: 20px;
+        color: #fff;
+    }
+  }
+  
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .footer-center, .useful-links, .useful-links1 {
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding */
+  }
+  
+  .footer-center img, .useful-links a, .useful-links1 a {
+    display: block;
+    margin: 0 auto; /* Center elements */
   }
   
   #medway-logo {
@@ -65,67 +151,56 @@
   
   #medway-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: rgb(242, 242, 243);
     font-weight: bold;
-    padding: 20px 40px;
-    margin-bottom: 50px;
-}
+    padding: 5px 5px;
+    margin: 0;
+  }
   
   #nav-link {
     padding-right: 20px;
-    position: relative;
-    left: 100px;
+  }
+  
+  #pest-nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(242, 242, 243);
+    font-weight: bold;
+    padding: 20px 20px;
+  }
+  
+  .TM {
+      position: absolute;
+      left: 0;
+      top: 0;
   }
   
   .footer-center {
     text-align: center;
-    margin: auto;
     width: 250px;
     position: relative;
     right: 75px;
     text-decoration: none;
   }
   
-  .useful-links {
-    background-color: #0a1e83;
-    width: 250px;
-    padding: 50px;
-    color: #fff;
-    white-space: nowrap;
-    position: relative;
-    right: 145px;
-  }
   
   #nav-link1 {
     flex-direction: column;
     width: 76px;
     margin-bottom: 25px;
     display: flex;
-    bottom: -145px;
-    left: 35px ;
     position: relative;
     color: #fff;
     text-decoration: none;
   }
   
-  .useful-links1 {
-    background-color: #0a1e83;
-    width: 250px;
-    padding: 50px;
-    color: #fff;
-    white-space: nowrap;
-    position: relative;
-    right: 145px;
-  }
   
   #nav-link2 {
     flex-direction: column;
     width: 76px;
     margin-bottom: 25px;
     display: flex;
-    bottom: -80px;
-    left: 5px ;
     position: relative;
     color: #fff;
     text-decoration: none;
@@ -139,28 +214,23 @@
     text-decoration: underline;
   }
   
-  #tm-web {
-    background-color: #0a8370;
-    text-decoration: none;
-   /* border-top: #0a5a83 2px solid;*/
-  }
-  
   #norse-banner {
     background-color: #47525e;
     color: white;
     padding-bottom: 15px;
   }
-
-  #pest-nav {
-    display: flex;
-    justify-content: center;
-}
   
   #norse-logo {
     width: 200px;
     position: relative;
-    top: -15px;
-    right: 20px;
+    right: 150px;
+    top: 5px;
+  }
+  
+  #norse-address {
+    position: relative;
+    right: 150px;
+    top: 65px;
   }
   
   #norse-nav {
@@ -398,6 +468,19 @@
     justify-content: center; /* Center items horizontally */
     flex-wrap: wrap; /* Allow items to wrap if necessary */
     color: #0a5a83;
+    padding-left: 175px; /* Add white space to the left */
+    padding-right: 175px; /* Add white space to the right */
+  }
+  
+  .index {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    color: #0a5a83;
+    padding-left: 250px; /* Add white space to the left */
+    padding-right: 250px;
+    margin-bottom: 250px;
   }
   
   .main {
@@ -467,49 +550,69 @@
   }
   
   .trustmark {
-    flex-direction: column;
-    width: 76px;
+    width: 35%;
+    max-width: 176px;
     margin-bottom: -15px;
+    font-size: 0.8em;
+    padding-bottom: 20px;
+    bottom: 25px;
     display: flex;
-    bottom: -45px;
-    left: 5px ;
-    position: relative;
-    text-decoration: none;
+    flex-direction: column; /* Ensure each item stacks its content */
+    align-items: center; /* Center-align images and text */
+    text-align: center; /* Center-align text */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .trustmark img {
+      max-width: 100px; /* Optional: Adjust image size */
+      height: auto;
+  }
+  
+  .trustmark img {
+      max-width: 100px; /* Optional: Adjust image size */
+      height: auto;
   }
   
   #tm-link {
     color: #fff;
     text-decoration: none;
     position: relative;
-    left: 25px;
-    bottom: 10px;
+   width: 122.33px;
+  }
+  
+  a#tm-link {
+    width: 120px;
   }
   
   #tm-link:hover {
     text-decoration: underline;
   }
   
-  .copyright {
-    position: relative;
-    bottom: -550px;
+  .footer .copyright {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
+  
+  #copyright {
     color: #fff;
-    left: -85px;
   }
   
   .link-header {
     color: #fff;
     font-size: 32px;
     position: relative;
-    left: -150px;
+    white-space: nowrap;
   }
   
   .contact-tile {
-    position: relative;
-    top: -230px;
-    right: -950px;
-    transform: translateY(-50%);
-    width: 270px;
-    height: 500px;
+    position: absolute; /* Fixed position to stay on the right */
+    top: 1600px; /* Center vertically */
+    right: 0; /* Align to the right edge */
+    transform: translateY(-50%); /* Center vertically */
+    width: 16%; /* Responsive width */
+    max-width: 210px; /* Maximum width */
+    height: auto; /* Auto height */
     background-color: #f7f7f7;
     border: 1px solid #ddd;
     border-radius: 8px 0 0 8px;
@@ -540,25 +643,27 @@
   
   /* Map Tile (Left Side) */
   .map-tile {
-    position: relative;
-    top: -390px;
-    left: -945px;
-    transform: translateY(-50%);
-    width: 275px;
-    height: 275px;
+    position: absolute; /* Fixed position to stay on the left */
+    top: 1600px; /* Center vertically */
+    left: 0; /* Align to the left edge */
+    transform: translateY(-50%); /* Center vertically */
+    width: 20%; /* Responsive width */
+    max-width: 230px; /* Maximum width */
+    height: 45%; /* Auto height */
     background-color: #f7f7f7;
-    color: #333;
-    border: 1px solid #333;
+    border: 1px solid #ddd;
     border-radius: 0 8px 8px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    padding: 10px;
     z-index: 1000;
-    text-decoration: underline;
+    color: #333;
     text-align: center;
+    text-decoration: underline;
   }
   
   .map-tile iframe {
     border-radius: 0 8px 8px 0;
+    height: 85%;
   }
   
   .services-contact-tile {
@@ -644,65 +749,9 @@
     margin-right: 20px;
   }
   
-  .norse-address {
-    background-color: #47525e;
-    width: 250px;
-    padding: 50px;
-    color: #fff;
-    display: flex;
-    white-space: nowrap;
-  }
-  
-  .medway-address {
-    background-color: #28b4e4;
-    width: 250px;
-    padding: 50px;
-    color: #fff;
-    display: flex;
-    white-space: nowrap;
-  }
-  
-  .medway-address1 {
-    background-color: #28b4e4;
-    width: 250px;
-    padding: 50px;
-    color: #fff;
-    display: flex;
-    white-space: nowrap;
-  }
-  
-  #medway-logo1 {
+  .medway-logo1 {
     position: relative;
-    top: -20px;
-    right: -90px;
-  }
-  
-  #medway-email {
-    position: relative;
-    right: -150px;
-    top: 55px;
-  }
-  
-  #medway-phone {
-    position: relative;
-    top: 125px;
-  }
-  
-  #pier-address {
-    position: relative;
-    right: 10px;
-    top: 80px;
-  }
-  
-  #stoney-lane {
-    position: relative;
-    right: -140px;
-    top: 55px;
-  }
-   
-  #norse-address {
-    position: relative;
-    top: 80px;
+    left: 105px;
   }
   
   .fa {
@@ -720,8 +769,7 @@
   
   .contact-info {
     position: relative;
-    right: 215px;
-    top: 60px;
+    top: 100px;
   }
   
   .rat1 {
@@ -1318,4 +1366,44 @@
     left: -1300px;
     top: 75px;
     position: relative;
+  }
+  
+  .main-img {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  
+  .trstmks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .trstmks img {
+    max-width: 12%;
+    height: auto;
+  }
+  
+  #medway-email{
+      position: relative;
+      right: 5%;
+  }
+  
+  #medway-phone {
+      white-space: nowrap;
+      position: relative;
+      right: 80px;
+      top: 162px;
+  }
+  
+  #stoney-lane {
+      white-space: nowrap;
+      position: relative;
+      right: 80px;
+      top: 162px;
   }

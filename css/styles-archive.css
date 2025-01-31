@@ -1,0 +1,1409 @@
+
+
+#medway-header {
+  color: #ffffff;
+  font-size: 48px;
+  position: relative;
+  top: 50px;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #f1f1f1;
+  color: #0a5a83;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2, p {
+  text-align: center;
+  color: #0a5a83;
+}
+
+header {
+  background-color: #0a5a83; /* Blue */
+}
+
+nav a {
+  color: rgb(12, 11, 11);
+  text-decoration: none;
+  padding: 8px;
+}
+
+nav a:hover {
+  color: #79b3f0; /* light blue */
+}
+
+.footer {
+  background-color: #47525e;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes the copyright to the bottom */
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-grow: 1; /* Allows footer container to grow */
+}
+
+/* Columns */
+.footer-col {
+  flex: 1;
+  margin: 0 10px;
+  color: #fff;
+}
+
+/* Column 1: Images and Anchors */
+.footer-col img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Contact and Useful Links Styles */
+.footer-col p, .footer-col ul {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+  width: 100%;
+  background-color: #47525e; /* Same color as footer */
+  position: relative;
+  color: #fff;
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 1024px) {
+  .footer-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 40px;
+  }
+
+  .footer-col img {
+      width: auto;
+      height: auto;
+  }
+
+  .footer-bottom {
+      margin-top: 20px;
+      color: #fff;
+  }
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-center, .useful-links, .useful-links1 {
+  margin: 0; /* Remove default margin */
+  padding: 10px; /* Add padding */
+}
+
+.footer-center img, .useful-links a, .useful-links1 a {
+  display: block;
+  margin: 0 auto; /* Center elements */
+}
+
+#medway-logo {
+  position: relative;
+  top: -40px;
+}
+
+#medway-banner {
+  background-color: #0a5a83;
+  color: #ffffff;
+  font-size: 48px;
+  padding: 5px;
+}
+
+#medway-nav {
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgb(242, 242, 243);
+  font-weight: bold;
+  padding: 5px 5px;
+  margin: 0;
+}
+
+#nav-link {
+  padding-right: 20px;
+}
+
+#pest-nav {
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgb(242, 242, 243);
+  font-weight: bold;
+  padding: 20px 20px;
+}
+
+.TM {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.footer-center {
+  text-align: center;
+  width: 250px;
+  position: relative;
+  right: 75px;
+  text-decoration: none;
+}
+
+
+#nav-link1 {
+  flex-direction: column;
+  width: 76px;
+  margin-bottom: 25px;
+  display: flex;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+#nav-link2 {
+  flex-direction: column;
+  width: 76px;
+  margin-bottom: 25px;
+  display: flex;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+#nav-link1:hover {
+  text-decoration: underline;
+}
+
+#nav-link2:hover {
+  text-decoration: underline;
+}
+
+#norse-banner {
+  background-color: #47525e;
+  color: white;
+  padding-bottom: 15px;
+}
+
+#norse-logo {
+  width: 200px;
+  position: relative;
+  right: 150px;
+  top: 5px;
+}
+
+#norse-address {
+  position: relative;
+  right: 150px;
+  top: 65px;
+}
+
+#norse-nav {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  padding: 0; /* Remove padding if any */
+  margin: 0; /* Remove margin */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center; /* Align text and icon vertically */
+  padding: 10px 15px; /* Adjust padding for spacing */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  color: #ffffff; /* Default text color */
+  transition: color 0.3s; /* Smooth transition for text color */
+  white-space: nowrap; /* Prevent text wrapping */
+  margin: 0; /* Remove margin */
+  position: relative;
+  right: 250px;
+}
+
+.nav-item .fa {
+  color: rgb(231, 61, 92); /* Icon color */
+  padding: 3px; /* Padding around the icon */
+  border-radius: 50%; /* Round icon background */
+  transition: background-color 0.1s; /* Smooth transition for background */
+  background-color: #47525e; /* Background color for icon */
+  border: none;
+}
+
+.nav-item:hover {
+  color: rgb(231, 61, 92); /* Change text color on hover */
+}
+
+.nav-item:hover .fa {
+  background-color: #88919b; /* Change background color on hover */
+}
+
+#contact-btn {
+  font-weight: bold;
+  padding: 18px 27px;
+  border-radius: 0px 15px;
+  border: none;
+  background-color: rgb(231, 61, 92);
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+  left: 10px;
+}
+
+#contact-btn:hover {
+  background-color: white;
+  color: rgb(231, 61, 92);
+}
+
+/* Cookies */
+#consentBox {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: fixed;
+  top: 50px;
+  left: 650px;
+  width: 500px;
+  z-index: 10;
+}
+
+#consentBox.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+#consentContent p {
+  color: #858585;
+  margin: 10px 0 20px 0;
+}
+
+#consentContent .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.consentButton,
+.rejectButton {
+  padding: 12px 30px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.consentButton {
+  background: #e73d5c;
+  margin-right: 10px;
+}
+
+.rejectButton {
+  color: #111211;
+  background: transparent;
+  border: 2px solid #e73d5c;
+  text-decoration: none;
+}
+
+#consentBox img {
+  max-width: 90px;
+}
+
+#consentHeader {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 10px;
+  width: auto;
+  background-color: transparent;
+}
+
+/* Form CSS */
+input[type=text], input[type=email], input[type=number], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit] {
+  background-color: #0a5a83;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+input[type=submit]:hover {
+  opacity: 75%;
+}
+
+input[type=submit]:active {
+  background-color: #ffffff;
+  color: #0a5a83;
+  border-color: #0a5a83;
+  border: solid;
+  border-width: 1px;
+  box-shadow: #333;
+  padding: 11px 19px;
+  font-weight: bold;
+}
+
+#contact-form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Radio button */
+.radio-cont {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #b4afaf;
+  border-radius: 50%;
+}
+
+.radio-cont:hover input ~ .radio {
+  background-color: #ccc;
+}
+
+.radio-cont input:checked ~ .radio {
+  background-color: #0a5a83;
+}
+
+.radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-cont input:checked ~ .radio:after {
+  display: block;
+}
+
+.radio-cont .radio:after {
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Base styles for the container */
+.container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
+  color: #0a5a83;
+  padding-left: 175px; /* Add white space to the left */
+  padding-right: 175px; /* Add white space to the right */
+}
+
+.index {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
+  color: #0a5a83;
+  padding-left: 250px; /* Add white space to the left */
+  padding-right: 250px;
+  margin-bottom: 250px;
+}
+
+.main {
+  padding-top: 15px;
+  color: #0a5a83;
+}
+
+.contact-icon {
+  display: none;
+}
+
+/* Container holding the image and the text */
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  background: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 350px;
+}
+
+.link-img {
+  width: 50px;
+  display: flex;
+}
+
+.tile {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.tile:hover::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  font-size: 1.8rem;
+}
+
+.trustmark {
+  width: 35%;
+  max-width: 176px;
+  margin-bottom: -15px;
+  font-size: 0.8em;
+  padding-bottom: 20px;
+  bottom: 25px;
+  display: flex;
+  flex-direction: column; /* Ensure each item stacks its content */
+  align-items: center; /* Center-align images and text */
+  text-align: center; /* Center-align text */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.trustmark img {
+    max-width: 100px; /* Optional: Adjust image size */
+    height: auto;
+}
+
+.trustmark img {
+    max-width: 100px; /* Optional: Adjust image size */
+    height: auto;
+}
+
+#tm-link {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+ width: 122.33px;
+}
+
+a#tm-link {
+  width: 120px;
+}
+
+#tm-link:hover {
+  text-decoration: underline;
+}
+
+.footer .copyright {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+#copyright {
+  color: #fff;
+}
+
+.link-header {
+  color: #fff;
+  font-size: 32px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.contact-tile {
+  position: absolute; /* Fixed position to stay on the right */
+  top: 1600px; /* Center vertically */
+  right: 0; /* Align to the right edge */
+  transform: translateY(-50%); /* Center vertically */
+  width: 16%; /* Responsive width */
+  max-width: 210px; /* Maximum width */
+  height: auto; /* Auto height */
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+  color: #333;
+}
+
+.contact-item {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.contact-item:hover {
+  color: #79b3f0;
+  text-decoration: underline;
+}
+
+.contact-tile:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Map Tile (Left Side) */
+.map-tile {
+  position: absolute; /* Fixed position to stay on the left */
+  top: 1600px; /* Center vertically */
+  left: 0; /* Align to the left edge */
+  transform: translateY(-50%); /* Center vertically */
+  width: 20%; /* Responsive width */
+  max-width: 230px; /* Maximum width */
+  height: 45%; /* Auto height */
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+  color: #333;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.map-tile iframe {
+  border-radius: 0 8px 8px 0;
+  height: 85%;
+}
+
+.services-contact-tile {
+  position: relative;
+  top: 200px;
+  right: -675px;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 270px;
+  color: #fff;
+  background-color: #0a5a83;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-contact-item {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow-wrap: break-word;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-contact-item:hover {
+  color: #79b3f0;
+  text-decoration: underline;
+}
+
+.faq {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+ /* background: #f2f2f2;*/
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: #ccc 1px solid;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #0a5a83;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #444;
+  outline: none;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: #555;
+  padding: 15px;
+  text-align: center;
+ /* background-color: #fff;
+  border: #333 1px solid;
+  border-radius: 10px;*/
+}
+
+.abt-us-img {
+  height: 105px;
+  margin-right: 50px;
+  margin-bottom: 55px;
+  position: relative;
+}
+
+.rsph {
+  height: 150px;
+  position: relative;
+  top: -25px;
+  margin-right: 20px;
+}
+
+.medway-logo1 {
+  position: relative;
+  left: 105px;
+}
+
+.fa {
+color: #e73d5c;
+}
+
+.white-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.white-link:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  position: relative;
+  top: 100px;
+}
+
+.rat1 {
+  height: 300px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -375px;
+  display: block;
+  line-height: 0;
+}
+
+.rat2 {
+  clip-path: circle(37%);
+  shape-outside: circle(42%);
+  float: left;
+  position: absolute;
+  top: -590px;
+  right: -660px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.rat3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.rat4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: 0px;
+  width: 450px;
+  display: block;
+  line-height: 0;
+}
+
+.mouse1 {
+  height: 200px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -375px;
+  display: block;
+  line-height: 0;
+}
+
+.mouse2 {
+  clip-path: circle(37%);
+  shape-outside: circle(42%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -620px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.mouse3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.mouse4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: 50px;
+  width: 500px;
+  display: block;
+  line-height: 0;
+}
+
+.bedbug1 {
+  height: 200px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.bedbug2 {
+  clip-path: circle(37%);
+  shape-outside: circle(42%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -620px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.bedbug3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.bedbug4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -50px;
+  width: 500px;
+  display: block;
+  line-height: 0;
+}
+
+.flies1 {
+  height: 200px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.flies2 {
+  clip-path: circle(32%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -660px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.flies3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.flies4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -50px;
+  width: 450px;
+  display: block;
+  line-height: 0;
+}
+
+.fleas1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.fleas2 {
+  clip-path: circle(35%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -520px;
+  right: -660px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.fleas3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.fleas4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -50px;
+  width: 450px;
+  display: block;
+  line-height: 0;
+}
+
+.pigeon1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.pigeon2 {
+  clip-path: circle(33%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -520px;
+  right: -675px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.pigeon3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.pigeon4 {
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -50px;
+  width: 450px;
+  display: block;
+  line-height: 0;
+}
+
+.beetle1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.beetle2 {
+  clip-path: circle(33%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -520px;
+  right: -675px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.beetle3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.beetle4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.ant1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.ant2 {
+  clip-path: circle(33%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -590px;
+  right: -650px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.ant3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.ant4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.roach1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.roach2 {
+  clip-path: circle(35%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.roach3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.roach4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.squirrel1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.squirrel2 {
+  clip-path: circle(35%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.squirrel3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.squirrel4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.silverfish1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.silverfish2 {
+  clip-path: circle(35%);
+  shape-outside: circle(37%);
+  float: left;
+  position: absolute;
+  top: -500px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.silverfish3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.silverfish4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.moth1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.moth2 {
+  clip-path: circle(45%);
+  shape-outside: circle(50%);
+  float: left;
+  position: absolute;
+  top: -420px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.moth3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.moth4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 400px;
+  display: block;
+  line-height: 0;
+}
+
+.wasp1 {
+  height: 200px;
+  float: left;
+  position: absolute;
+  left: -650px;
+  top: -475px;
+  display: block;
+  line-height: 0;
+}
+
+.wasp2 {
+  clip-path: circle(45%);
+  shape-outside: circle(50%);
+  float: left;
+  position: absolute;
+  top: -450px;
+  right: -600px;
+  height: 250px;
+  display: block;
+  line-height: 0;
+}
+
+.wasp3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.wasp4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 500px;
+  display: block;
+  line-height: 0;
+}
+
+.exterm1 {
+  height: 180px;
+  float: left;
+  position: absolute;
+  left: -665px;
+  top: -780px;
+  display: block;
+  line-height: 0;
+}
+
+.exterm2 {
+  clip-path: circle(37%);
+  shape-outside: circle(42%);
+  float: left;
+  position: absolute;
+  top: -1300px;
+  right: -670px;
+  height: 270px;
+  display: block;
+  line-height: 0;
+}
+
+.exterm3 {
+  height: 275px;
+  float: left;
+  position: absolute;
+  right: -650px;
+  display: block;
+  top: -5px;
+  line-height: 0;
+}
+
+.exterm4 {
+  float: left;
+  position: absolute;
+  left: -600px;
+  top: -50px;
+  width: 500px;
+  display: block;
+  line-height: 0;
+}
+
+.rat {
+  width: 150px;
+  display: flex;
+  left: -1300px;
+  top: 75px;
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.trstmks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.trstmks img {
+  max-width: 12%;
+  height: auto;
+}
+
+#medway-email{
+    position: relative;
+    right: 5%;
+}
+
+#medway-phone {
+    white-space: nowrap;
+    position: relative;
+    right: 80px;
+    top: 162px;
+}
+
+#stoney-lane {
+    white-space: nowrap;
+    position: relative;
+    right: 80px;
+    top: 162px;
+}

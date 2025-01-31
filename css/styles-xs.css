@@ -1,0 +1,52 @@
+#norse-logo {
+    transform: translate(50px,-575px);
+}
+
+#norse-address {
+    transform: translate(-50px,-750px);
+}
+
+#norse-email {
+    transform: translate(125px, -595px);
+}
+
+#norse-phone {
+    transform: translate(125px, -595px);
+}
+
+.medway-logo1 {
+    transform: translate(90px,75px);
+}
+
+#pier-address {
+    transform: translate(-25px,-25px);
+}
+
+#stoney-lane {
+    transform: translate(0px,50px);
+}
+
+#medway-email {
+    transform: translate(-15px,250px);
+}
+
+#medway-phone {
+    transform: translate(0px,350px);
+}
+
+#link-title {
+    transform: translate(-130px,100px);
+}
+
+.useful-links {
+    transform: translate(-10px,-325px);
+}
+
+.useful-links1 {
+    transform: translate(-10px,-325px);
+}
+
+.contact-tile {
+    width: 80%;
+    transform: translate(-100px,-100px);
+}

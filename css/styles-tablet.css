@@ -1,0 +1,181 @@
+#medway-banner {
+    padding: 20px 5px; /* Increases top and bottom padding, keeps left and right the same */
+}
+
+#nav-link {
+    transform: translateX(50px);
+}
+
+.contact-tile{
+    transform: translate(-315px, -300px);
+    width: 80%;
+}
+
+.rat {
+    transform: translate(-35px, -75px);
+    width: auto;
+    height: 50px;
+}
+
+.index {
+    padding: 55px;
+}
+
+.contact-item {
+    font-size: 1.3em;
+}
+
+#medway-nav {
+    margin-bottom: 15px;
+}
+
+#norse-logo {
+transform: translate(-250px, -200px);
+width: auto;
+height: 100px;
+}
+
+#norse-address {
+    transform: translate(-425px, -400px)
+}
+
+#norse-email {
+    transform: translate(-75px, -200px);
+}
+
+#norse-phone {
+    transform: translate(-75px, -200px);
+}
+
+.medway-logo1{
+    transform: translate(230px, 150px);
+}
+
+#pier-address {
+    transform: translate(50px, 20px);
+}
+
+#medway-phone {
+    transform: translate(180px, 520px);
+}
+
+#medway-email {
+    transform: translate(50px, 370px);
+}
+
+#stoney-lane {
+    transform: translate(200px, 145px);
+    padding: 0px;
+}
+
+.useful-links{
+    transform: translate(-100px, 180px);
+}
+
+#link-title {
+    transform: translate(325px, 125px);
+}
+
+.useful-links1 {
+    transform: translate(50px, 180px);
+}
+
+.useful-links, .useful-links1, #stoney-lane, 
+#medway-email, #medway-phone, #pier-address, #norse-address,
+#norse-phone, #norse-email {
+    font-size: 22px;
+}
+
+.footer-container {
+    margin-bottom: 100px;
+    padding-bottom: 400px;
+}
+
+/*#medway-phone, #stoney-lane {
+    white-space: nowrap;
+    text-align: center;
+}*/
+
+.trustmarks-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping by default (for small screens) */
+    justify-content: center; /* Center items horizontally */
+    gap: 100px; /* Space between items */
+    transform: translateY(1300px);
+  }
+
+  .trustmark img {
+    width: 110%;
+    max-width: 150px; /* Max size */
+    height: auto;
+}
+
+#link-title {
+    font-size: 26px;
+}
+
+/* Container holding the image and the text */
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(15%);
+    margin-bottom: 25px;
+  }
+  
+  .link-img {
+    width: 50px;
+    display: flex;
+  }
+
+.tile {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+  
+  .tile::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+  }
+  
+  .tile:hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .tile:hover {
+    transform: scale(1.05);
+    font-size: 1.8rem;
+  }
+  
+  #contact-form {
+    transform: translateX(20px);
+    margin-bottom: 30px;
+  }
+
+  .faq {
+margin: 25px;
+padding: 30px, 0px;
+}
