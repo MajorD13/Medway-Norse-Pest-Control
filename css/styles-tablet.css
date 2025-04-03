@@ -7,8 +7,12 @@
 }
 
 .contact-tile{
-    transform: translate(-315px, -300px);
+    transform: translate(-32%, -675px);
     width: 80%;
+}
+
+.tablet{
+    transform: translate(-325px, -700px);
 }
 
 .rat {
@@ -30,7 +34,7 @@
 }
 
 #norse-logo {
-transform: translate(-250px, -200px);
+transform: translate(-275px, -300px);
 width: auto;
 height: 100px;
 }
@@ -43,12 +47,20 @@ height: 100px;
     transform: translate(-75px, -200px);
 }
 
+h2{
+    transform: translateY(25px);
+}
+
+.main {
+    transform: translateY(-50px);
+}
+
 #norse-phone {
     transform: translate(-75px, -200px);
 }
 
 .medway-logo1{
-    transform: translate(230px, 150px);
+    transform: translate(275px, 150px);
 }
 
 #pier-address {
@@ -126,6 +138,10 @@ height: 100px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transform: translateX(15%);
     margin-bottom: 25px;
+  }
+
+  p{
+    transform: translateY(50px);
   }
   
   .link-img {

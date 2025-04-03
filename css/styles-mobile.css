@@ -21,7 +21,7 @@ body {
   header {
     background-color: #0a5a83; /* Blue */
   }
-
+ 
   #medway-nav {
     display: flex;
     justify-content: flex-start;
@@ -146,7 +146,7 @@ body {
     position: fixed; /* Fix the position relative to the viewport */
     bottom: 50px; /* Place it 10px from the bottom of the page */
     left: 46%; /* Center it horizontally */
-    transform: translate(-50%, -175px); /* Offset by half its width to center it perfectly */
+    transform: translate(-50%, -375px); /* Offset by half its width to center it perfectly */
 }
 
   #l {
@@ -455,7 +455,7 @@ body {
   }
 
   #medway-phone {
-    transform: translate(-15px,475px);
+    transform: translate(-15px,460px);
   }
 
   #stoney-lane {

@@ -5,6 +5,7 @@
     font-size: 48px;
     position: relative;
     top: 50px;
+    transform: translateY(-40px);
   }
   
   body {
@@ -36,6 +37,8 @@
   nav a:hover {
     color: #79b3f0; /* light blue */
   }
+
+
   
   .footer {
     background-color: #47525e;
@@ -140,6 +143,7 @@
   #medway-logo {
     position: relative;
     top: -40px;
+    transform: translate(150px, 40px);
   }
   
   #medway-banner {
@@ -301,6 +305,7 @@
     left: 650px;
     width: 500px;
     z-index: 10;
+    transform: translate(-50px, 100px);
   }
   
   #consentBox.hide {
@@ -486,6 +491,7 @@
   .main {
     padding-top: 15px;
     color: #0a5a83;
+    transform: translateY(10px);
   }
   
   .contact-icon {
@@ -1385,7 +1391,7 @@
   }
   
   .trstmks img {
-    max-width: 12%;
+    max-width: 15%;
     height: auto;
   }
   
