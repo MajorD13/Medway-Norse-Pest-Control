@@ -1,237 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medway Norse Pest Control - Home</title>
-<!-- Default (base) CSS for XXS screens (under 375px) -->
-<link rel="stylesheet" href="css/styles-xxs.css">
-
-<!-- For screens between 375px and 400px (Extra Small screens) -->
-<link rel="stylesheet" href="css/styles-xs.css" media="(min-width: 375px) and (max-width: 400px)">
-
-<!-- For screens between 400px and 768px (Mobile screens) -->
-<link rel="stylesheet" href="css/styles-mobile.css" media="(min-width: 400px) and (max-width: 768px)">
-
-<!-- For screens wider than 768px (Tablet & larger devices) -->
-<link rel="stylesheet" href="css/styles-tablet.css" media="(min-width: 768px)">
-
-<!-- For screens wider than 1024px (Desktop & larger devices) -->
-<link rel="stylesheet" href="css/styles.css" media="(min-width: 1024px)">
-
-<!-- For screens wider than 1200px (Extra Large screens) -->
-<link rel="stylesheet" href="css/styles-xl.css" media="(min-width: 1200px)">
-
-<!-- For screens wider than 1400px (Extra Extra Large screens) -->
-<link rel="stylesheet" href="css/styles-xxl.css" media="(min-width: 1400px)">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/site.webmanifest">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Medway Norse Pest Control — Medway Council's approved pest control provider. Same-day service across Chatham, Gillingham, Rochester, Rainham and all Medway towns. Call 01634 283215.">
+  <title>Medway Norse Pest Control | Council Approved | Same-Day Service</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <header id="medway-banner">
-        <div class="container">
-            <img class="col-lg-offset-10" id="medway-logo" src="images/Medway-Rev.png" alt="medway norse logo">
-            <h1 class="col" id="medway-header">Medway Norse<br>Pest Control</h1>
-            <img class="rat" src="images/rat-ca.png" alt="pest">
-        </div>
-    </header>
-    <span id="pest-nav">
-        <nav id="medway-nav">
-            <a id="nav-link" href="index.html">Home</a>
-            <a id="nav-link" href="about.html">About</a>
-            <a id="nav-link" href="services.html">Services</a>
-            <a id="nav-link" href="contact-us.html">Contact Us</a>
-            <a id="nav-link" href="faq.html">FAQ</a>
-        </nav>
-    </span>
-    
-    <div class="container main">
-        <h2 style="font-size: 1.5em;"><b>Welcome to Medway Norse Pest Control</b></h2>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar__inner">
+      <div class="topbar__contact">
+        <a href="tel:01634283215">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.61 19.79 19.79 0 01.22 1a2 2 0 012-1.8h3a2 2 0 012 1.72c.13.97.36 1.92.7 2.83a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.91.34 1.86.57 2.83.7A2 2 0 0122 14.9v2.02z"/></svg>
+          01634 283215
+        </a>
+        <a href="mailto:pestcontrol@ncsgrp.co.uk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          pestcontrol@ncsgrp.co.uk
+        </a>
+        <a href="#coverage">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Medway &amp; Surrounding Areas
+        </a>
+      </div>
+      <div class="topbar__badges">
+        <div class="topbar__pill">🏛️ Council Approved</div>
+        <div class="topbar__pill--gold topbar__pill">⚡ Same-Day Available</div>
+      </div>
     </div>
-    <div class="container main">
-        <p class="tag-line" style="font-size: 1.2em;">Medway Norse Pest Control: Your council approved pest control partner for pest free living and working, local expertise you can trust.</p><br><br>
-    </div>
-    <div>
-        <picture>
-            <source srcset="images/norse-van.jpg" media="(max-width: 500px)">
-            <source srcset="images/norse-depot.jpg" media="(max-width: 1023px)">
-            <img src="images/stoney-lane.PNG" alt="stoney-lane">
-        </picture>
-    </div>
-    <div>    
-        <p style="font-size: 1.4em;"><b>Why Choose Medway Norse Pest Control?</p><br><br>
+  </div>
 </div>
-            <div class="trstmks">
-                <img class="abt-us-img" src="images/Veritas.jpg" alt="Norse-Group">
-                <img class="abt-us-img" src="images/wildlife.jpg" alt="Medway-council">
-                <img class="abt-us-img" src="images/Norse_Group_logo_optimized.png" alt="Norse-Group">
-                <img class="abt-us-img" src="images/Medway_Council-rgb.png" alt="Medway-council">
-                <img class="abt-us-img" src="images/BPCA-member-logo-rgb_225x225.jpg" alt="BPCA-member-logo">
-                <img class="abt-us-img" src="images/RSPH-rgb.png" alt="RSPH-logo">
-                <img class="abt-us-img" src="images/trustmark-logo.jpg" alt="trustmark-logo">
-   </div>
-<div class="index">
-                <p style="font-size: 1.2em;"><u>Your Trusted Local Pest Control Experts<br><br><br></u></b></p>
-<p>            <b>o	Council Approved:</b> We are fully vetted and approved by the Medway Council, ensuring the highest standards of service and safety.<br><br>
-            <b>o	Local Expertise:</b> Meet Your Medway Pest Control Experts: Medway Norse Pest Control is your home team advantage against unwanted pests.
-             Our team of technicians aren't just qualified professionals with over 60 years of combined experience and Level 2 certifications:
-              they're your Medway neighbours. This means they have an intimate understanding of the local pest pressures and bring a passion for protecting our community.
-               Each technician boasts a specialised area of expertise, ensuring we have the right solution for any pest problem.
-                With Medway Norse, you get effective, council-approved pest control from local experts who truly care.<br><br>
-           <b> o	Effective Solutions:</b> We use proven methods and industry-leading products to effectively eliminate pests and prevent future infestations,
-             including specialised services like bird proofing.<br><br>
-          <b> o	Customer Focused:</b> Your satisfaction is our priority, starting from the moment you contact us.
-             Our friendly and understanding admin team is here to answer your calls and emails with the utmost discretion and professionalism.
-              They'll guide you through the process, answer your questions without judgment, and help you schedule a service that fits your needs.
-               Don't be embarrassed to reach out – we understand that pest problems can be stressful, and we're here to help, no matter the situation.
-                We offer transparent pricing, clear communication, and reliable service.
-            </p>
-            </div>
-    <div class="center-container">
-            <!-- contact tile-->
-            <div class="contact-tile">
-             <p  id="contact-title" class="contact-item" style="font-size: 1.5em; font-weight: 600;" >
-                     Contact Us Now!</p><br>
-                <a id="l" href="mailto:pestcontrol@ncsgrp.co.uk" class="contact-item"><i class="fa fa-phone l"></i> PestControl@ncsgrp.co.uk</a><br><br>
-                <a href="tel:01634283215" class="contact-item"><i class="fa fa-phone"></i> 01634 283215</a><br><br>
-                <p id="l"> <a href="contact-us.html" class="contact-item" style="font-size: 1.2em;">
-                    Get the help you need.<br>Contact us now
-                </a></p>
-            </div>
-    </div>
-    <div class="center-container">
-            <!--map tile-->
-           <div class="map-tile">
-                <h4><u>How to find us</u></h4>
-                <iframe
-                    src=
-                    "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1245.7888619351306!2d0.4984119504679396!3d51.35567519372614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDIxJzE5LjEiTiAwwrAyOSc1MS4wIkU!5e0!3m2!1sen!2suk!4v1736335231811!5m2!1sen!2suk"
-                    width="100%"
-                    height="100%"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="How to find us">
-                </iframe>
-            </div>
-    </div>
-        </body>
-    </div>
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Column 1: Images and Anchors -->
-            <div class="footer-col trustmarks-container">
-                <a class="trustmark" href="https://bpca.org.uk/"><img class="trustmark" src="images/BPCA-member-logo-rgb.jpg" alt="BPCA logo"><p class="tm">BPCA<br>Official<br>Website</p></a>
-                <a class="trustmark" href="https://www.rsph.org.uk/"><img class="trustmark" src="images/RSPH-rgb1.png" alt="RSPH Logo"><p class="tm">RSPH<br>Official<br>Website</p></a>
-                <a class="trustmark" href="https://www.trustmark.org.uk/homeowner"><img class="trustmark" src="images/trustmark-logo.png" alt="Trustmark Logo"><p class="tm">TrustMark<br>Official<br>Website</p></a>
-                <a class="trustmark" href="https://www.medway.gov.uk/"><img class="trustmark" src="images/Medway_Council.png" alt="Medway-council"><p class="tm">Medway<br>Council<br>Official<br>Website</p></a>
-            </div>
-    
-            <!-- Column 2: Contact Information -->
-            <div class="footer-col">
-                <a href="index.html"><img class="medway-logo1" src="images/Medway-Rev.png"></a>
-                <p id="medway-email"><i class="fa fa-envelope" aria-hidden="true" style="color: #fff;"></i><br><a id="medway-email" class="white-link" href="mailto:medwaynorse@ncsgrp.co.uk"> medwaynorse@ncsgrp.co.uk</a><br><br>
-                </p>
-                <p id="pier-address"> <i class="fa fa-map-marker" aria-hidden="true" style="color: #fff;"></i>
-                    <a class="white-link" id="pier-address" style="position:relative; z-index:10"
-                     href="https://www.google.com/maps/place/Pier+Approach+Rd,+Gillingham+ME7+1RX/@51.3981421,0.55482,692m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47d8cd88dac934e5:0x397759589bfd962!8m2!3d51.3981421!4d0.55482!16s%2Fg%2F11y8wbdbtc?entry=ttu&g_ep=EgoyMDI1MDExNC4wIKXMDSoASAFQAw%3D%3D">
-                        <br>Pier Approach Rd<br>
-        Gillingham<br>
-        Kent<br>
-        ME7 1RT<br><br></a></p>
-            </div>
-    
-            <!-- Column 3: Contact Information -->
-            <div class="footer-col">
-                <p id="medway-phone">    <i class="fa fa-phone" aria-hidden="true" style="color: #fff;"><br></i><a style="position:relative; z-index:10" class="white-link" id="medway-phone" href="tel:01634283210"><br> 01634 283210</a><br><br>
-                </p>
-                <p id="stoney-lane"> <br><i class="fa fa-map-marker" aria-hidden="true" style="color: #fff;"></i>
-                    <a class="white-link" id="stoney-lane" href="https://www.google.com/maps/place/Stoney+Ln,+Rochester/@51.354513,0.4923677,693m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47d8ccc8ed778095:0xee8e2dda1ee79bcc!8m2!3d51.354513!4d0.4949426!16s%2Fg%2F1tv23dtr?entry=ttu&g_ep=EgoyMDI1MDExNC4wIKXMDSoASAFQAw%3D%3D">
-                      <br> Stoney Lane<br> Maidstone Rd <br>
-                        Chatham<br>
-        Kent<br>
-        ME1 3QY<br><br></a></p>
-            </div>
-    
-            <!-- Column 4: Blank Column -->
-            <div class="footer-colh"></div>
-    
-            <!-- Column 5: Parent Company Contact -->
-            <div class="footer-col">
-                <p><a href="https://norsegroup.co.uk/">
-                    <img id="norse-logo" src="images/Norse_Group_logo.png" alt="Norse Group Logo">
-                    </a></p>
-                <p id="norse-email"><i class="fa fa-envelope" aria-hidden="true"></i><a class="white-link" id="norse-address" href="mailto:info@norsegroup.co.uk"><br> info@norsegroup.co.uk</a></p>
-                <p id="norse-phone"><i class="fa fa-phone" aria-hidden="true"></i><a class="white-link" id="norse-address" href="tel:01603894100"><br> 01603 894100<br></a></p>
-                <p id="norse-address"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <a class="white-link" href="https://www.google.co.uk/maps/place/280+Fifers+Ln,+Norwich+NR6+6EQ/@52.6664906,1.2735206,17z/data=!3m1!4b1!4m6!3m5!1s0x47d9e18e34b8b6bb:0xfb6477561fcc68b3!8m2!3d52.6664906!4d1.2760955!16s%2Fg%2F11csnwvg6g?entry=ttu&g_ep=EgoyMDI1MDExMC4wIKXMDSoASAFQAw%3D%3D">
-                      <br>   280 Fifers Lane<br>
-            Norwich<br>
-            Norfolk<br>
-            NR6 6EQ<br><br></a></p>
-            </div>
-    
-            <!-- Column 6: Useful Links -->
-            <h5 id="link-title"><u>Useful Links</u></h5>
-            <div class="footer-col useful-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-col useful-links1">
-                <ul>
-                    <li><a href="Rats.html">Rats</a></li>
-                    <li><a href="Mice.html">Mice</a></li>
-                    <li><a href="pigeon.html">Bird Control</a></li>
-                    <li><a href="fleas.html">Fleas</a></li>
-                    <li><a href="other.html">Other Services</a></li>
-                    <li><a href="#">Site Map</a></li>
-                </ul>
-            </div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="https://www.medwaynorsepestcontrol.co.uk/images/Medway-Rev.png" alt="Medway Norse Pest Control" style="height:40px;width:auto;display:block;">Medway <span>Norse</span> Pest Control
+      </a>
+      <div class="nav__links">
+        <a href="index.html" class="active">Home</a>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">
+            Services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav__dropdown-menu">
+            <a href="services.html"><span>🐀</span> All Services</a>
+            <a href="rats.html"><span>🐀</span> Rats</a>
+            <a href="mice.html"><span>🐭</span> Mice</a>
+            <a href="wasps.html"><span>🐝</span> Wasps</a>
+            <a href="bed-bugs.html"><span>🛏️</span> Bed Bugs</a>
+            <a href="fleas.html"><span>🦟</span> Fleas</a>
+            <a href="cockroaches.html"><span>🪲</span> Cockroaches</a>
+            <a href="birds.html"><span>🐦</span> Bird Control</a>
+            <a href="services.html"><span>➕</span> More Pests…</a>
+          </div>
         </div>
-        <!-- Copyright Section -->
-        <div class="footer-bottom">
-            <p id="copyright">&copy; <span id="currentYear"></span> Medway Norse Pest Control</p>
-        </div>
-    </footer>
-    <!--       cookies     --> 
-    <div id="consentBox">
-        <img src="images/Norse_Group_logo.png" alt="Norse Group Logo">
-        <div id="consentContent">
-            <header id="consentHeader">
-                Cookies: The choice is yours
-            </header>
-            <p class="cookies">
-                We use cookies to make our site work well
-                for you and so we can continually improve it.
-                <br>The cookies that are necessary to 
-                keep the site functioning are always on
-            </p>
-            <div class="buttons">
-                <button class="consentButton">
-                    Accept Cookies
-                </button>
-                <button class="rejectButton">
-                    Reject
-                </button>
-            </div>
-        </div>
+        <a href="commercial.html">Commercial</a>
+        <a href="prices.html">Prices</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="nav__cta">📞 Get Help Now</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <script src="script.js"></script>
-    
-    </body>
-    </html>
+  </div>
+  <div class="nav__mobile-menu" id="mobileMenu" style="display:none">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="prices.html">Prices</a>
+    <a href="about.html">About Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html" class="nav__cta">📞 Get Help Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div>
+        <div class="hero__breadcrumb">Medway &amp; Kent › <span>Pest Control</span></div>
+        <div class="badge badge--white">🏛️ Medway Council's Approved Provider</div>
+        <h1 class="fade-up">Fast, <em>Professional</em> Pest Control You Can Trust</h1>
+        <p class="hero__sub fade-up fade-up--delay-1">Medway's only council-approved pest control team. BPCA-accredited, locally based, and ready to respond — same day when you need us most.</p>
+        <div class="hero__actions fade-up fade-up--delay-2">
+          <a href="contact.html" class="btn btn--primary btn--lg">📋 Get a Free Quote</a>
+          <a href="tel:01634283215" class="btn btn--secondary btn--lg">📞 Call Us Now</a>
+        </div>
+        <div class="hero__trust fade-up fade-up--delay-3">
+          <div class="hero__trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            60+ Years Combined Experience
+          </div>
+          <div class="hero__trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            RSPH Level 2 Qualified
+          </div>
+          <div class="hero__trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Fully Insured &amp; Documented
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="hero__card">
+          <div class="hero__emergency-label">⚡ Same-Day Response Available</div>
+          <a href="tel:01634283215" class="hero__phone">01634 283215</a>
+          <p class="hero__phone-sub">Mon–Fri 8am–5pm · Emergency line available</p>
+          <div class="hero__card-form">
+            <input type="text" placeholder="Your name" autocomplete="name">
+            <input type="text" placeholder="Your postcode" autocomplete="postal-code">
+            <select>
+              <option value="">Select pest type…</option>
+              <option>Rats</option>
+              <option>Mice</option>
+              <option>Wasps</option>
+              <option>Bed Bugs</option>
+              <option>Fleas</option>
+              <option>Cockroaches</option>
+              <option>Ants</option>
+              <option>Bird Control / Pigeons</option>
+              <option>Other</option>
+            </select>
+            <a href="contact.html" class="btn btn--primary" style="text-align:center;justify-content:center;">Request a Callback →</a>
+          </div>
+          <p class="hero__card-note">🔒 Discreet, no-obligation contact. Unmarked vehicles available.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-strip__inner">
+      <div class="trust-strip__item">
+        <span class="trust-strip__icon">🏛️</span> Medway Council Approved
+      </div>
+      <div class="trust-strip__item">
+        <span class="trust-strip__icon">🎓</span> BPCA Member
+      </div>
+      <div class="trust-strip__item">
+        <span class="trust-strip__icon">✅</span> RSPH Certified Technicians
+      </div>
+      <div class="trust-strip__item">
+        <span class="trust-strip__icon">🏅</span> TrustMark Registered
+      </div>
+      <div class="trust-strip__item">
+        <span class="trust-strip__icon">🚐</span> Unmarked Vehicles
+      </div>
+      <div class="trust-strip__item">
+        <span class="trust-strip__icon">📋</span> CEPA Certified
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COVERAGE STRIP -->
+<div class="coverage-strip" id="coverage">
+  <div class="container">
+    <div class="coverage-strip__inner">
+      <span class="coverage-strip__label">📍 We Cover</span>
+      <div class="coverage-strip__towns">
+        <span class="coverage-strip__town">Chatham</span>
+        <span class="coverage-strip__town">Gillingham</span>
+        <span class="coverage-strip__town">Rochester</span>
+        <span class="coverage-strip__town">Rainham</span>
+        <span class="coverage-strip__town">Strood</span>
+        <span class="coverage-strip__town">Hempstead</span>
+        <span class="coverage-strip__town">Walderslade</span>
+        <span class="coverage-strip__town">Lordswood</span>
+        <span class="coverage-strip__town">Sittingbourne</span>
+        <span class="coverage-strip__town">Maidstone</span>
+        <span class="coverage-strip__town">Faversham</span>
+        <span class="coverage-strip__town">Isle of Grain</span>
+        <span class="coverage-strip__town">Gravesend</span>
+        <span class="coverage-strip__town">Sheerness</span>
+        <span class="coverage-strip__town">+ All of Kent</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE US -->
+<section class="section" style="background: var(--off-white);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Medway's Most <em>Trusted</em> Pest Control</h2>
+      <span class="divider divider--center"></span>
+      <p class="section-subtitle" style="margin:0 auto;">The only pest control company with Medway Council approval — backed by decades of local expertise and national-standard accreditation.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card__icon">🏛️</div>
+        <h4>Council Approved</h4>
+        <p>We are the <strong>exclusive</strong> Medway Council-approved provider — the highest endorsement available in the Medway area. When you call us, you're getting the standard the council trusts.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">⚡</div>
+        <h4>Same-Day Response</h4>
+        <p>We know pest problems can't wait. We offer same-day appointments when available, and next-day service as standard. Call before noon for the fastest response.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">🎓</div>
+        <h4>RSPH Level 2 Qualified</h4>
+        <p>Every technician holds RSPH Level 2 Award in Pest Management — the industry benchmark qualification. Over 60 years of combined hands-on experience across our team.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">🤝</div>
+        <h4>Local &amp; Discreet</h4>
+        <p>Our team live and work in Medway. We use unmarked vehicles and understand the need for discretion. No embarrassment, no judgment — just professional, neighbourly service.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">📋</div>
+        <h4>Fully Documented</h4>
+        <p>Every visit includes a written service report — essential for landlords, businesses, and EHO compliance. Our documentation meets BPCA and CEPA standards.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">💷</div>
+        <h4>Transparent Pricing</h4>
+        <p>No hidden charges. No surprise add-ons. Our prices are published and fixed — you'll know exactly what you're paying before we arrive. <a href="prices.html" style="color:var(--teal)">See our price list →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:16px;">
+      <div>
+        <span class="section-label">Our Services</span>
+        <h2 class="section-title">What Pest Do You Have?</h2>
+        <span class="divider"></span>
+      </div>
+      <a href="services.html" class="btn btn--outline">View All Services →</a>
+    </div>
+    <div class="services-grid">
+      <a href="rats.html" class="service-card">
+        <span class="service-card__icon">🐀</span>
+        <h4>Rats</h4>
+        <p>Brown rat infestations treated with a 3-visit baiting programme</p>
+        <span class="service-card__price">From £195</span>
+      </a>
+      <a href="mice.html" class="service-card">
+        <span class="service-card__icon">🐭</span>
+        <h4>Mice</h4>
+        <p>Comprehensive trapping and baiting with proofing advice</p>
+        <span class="service-card__price">From £195</span>
+      </a>
+      <a href="wasps.html" class="service-card">
+        <span class="service-card__icon">🐝</span>
+        <h4>Wasps</h4>
+        <p>Single nest treatment using professional insecticidal dust</p>
+        <span class="service-card__price">From £110</span>
+      </a>
+      <a href="bed-bugs.html" class="service-card">
+        <span class="service-card__icon">🛏️</span>
+        <h4>Bed Bugs</h4>
+        <p>Targeted insecticide treatment programme by bedroom</p>
+        <span class="service-card__price">From £180</span>
+      </a>
+      <a href="fleas.html" class="service-card">
+        <span class="service-card__icon">🦟</span>
+        <h4>Fleas</h4>
+        <p>Full-property spray including growth regulator treatment</p>
+        <span class="service-card__price">From £120</span>
+      </a>
+      <a href="cockroaches.html" class="service-card">
+        <span class="service-card__icon">🪲</span>
+        <h4>Cockroaches</h4>
+        <p>Gel bait programme targeting harbourage areas</p>
+        <span class="service-card__price">POA</span>
+      </a>
+      <a href="birds.html" class="service-card">
+        <span class="service-card__icon">🐦</span>
+        <h4>Bird Control</h4>
+        <p>Netting, spikes, guano clearance and exclusion works</p>
+        <span class="service-card__price">Free Survey</span>
+      </a>
+      <a href="services.html" class="service-card" style="border-style:dashed;background:var(--off-white);">
+        <span class="service-card__icon">➕</span>
+        <h4>More Pests</h4>
+        <p>Ants, squirrels, moles, moths, silverfish, beetles and more</p>
+        <span class="service-card__price" style="background:var(--grey-light);color:var(--grey);">View All</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- COMMERCIAL STRIP -->
+<section class="commercial-strip section">
+  <div class="container">
+    <div class="commercial-strip__inner">
+      <div>
+        <span class="badge badge--white">🏢 Commercial Pest Control</span>
+        <h2>Protecting <em>Medway Businesses</em> Since Day One</h2>
+        <p>Compliance-grade pest management for the sectors that can't afford to get it wrong. Fully documented, EHO and CQC audit-ready contracts for restaurants, landlords, care homes and hotels.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="commercial.html" class="btn btn--primary">Explore Commercial Services</a>
+          <a href="contact.html" class="btn btn--secondary">Get a Contract Quote</a>
+        </div>
+      </div>
+      <div class="commercial-sectors">
+        <a href="commercial.html#restaurants" class="commercial-sector">
+          <span>🍽️</span><span>Restaurants &amp; Catering</span>
+        </a>
+        <a href="commercial.html#landlords" class="commercial-sector">
+          <span>🏠</span><span>Landlords &amp; Property</span>
+        </a>
+        <a href="commercial.html#carehomes" class="commercial-sector">
+          <span>🏥</span><span>Care Homes</span>
+        </a>
+        <a href="commercial.html#hotels" class="commercial-sector">
+          <span>🏨</span><span>Hotels &amp; Hospitality</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-label">Customer Reviews</span>
+      <h2 class="section-title">What Our Customers <em>Say</em></h2>
+      <span class="divider divider--center"></span>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <p>"Called in the morning and the technician was with us the same afternoon. Professional, friendly, and explained every step. The rat problem was sorted within the programme. Brilliant service."</p>
+        <div class="testimonial-card__author">Sarah T.</div>
+        <div class="testimonial-card__location">Chatham, Kent</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <p>"Very discreet — came in an unmarked van which I really appreciated. Dealt with our wasp nest quickly and efficiently. Wouldn't hesitate to recommend Medway Norse to anyone in the area."</p>
+        <div class="testimonial-card__author">James M.</div>
+        <div class="testimonial-card__location">Gillingham, Kent</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <p>"As a landlord I need a reliable contractor I can trust. The team are always prompt, thorough and the paperwork is exactly what I need for my property compliance records. Highly recommended."</p>
+        <div class="testimonial-card__author">David K.</div>
+        <div class="testimonial-card__location">Rochester, Kent</div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:24px;color:var(--grey);font-size:13px;">⚠️ Reviews shown are illustrative — replace with verified Google reviews before publishing.</p>
+  </div>
+</section>
+
+<!-- EMERGENCY CTA BAND -->
+<section class="section--sm" style="background: linear-gradient(135deg, var(--navy-dark), var(--navy));position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 400px 300px at 80% 50%,rgba(0,117,143,0.2) 0%,transparent 70%);"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div>
+        <div class="hero__emergency-label">⚡ Same-Day &amp; Emergency Response Available</div>
+        <h2 style="color:var(--white);margin-bottom:8px;">Got a Pest Problem <em style="color:var(--teal)">Right Now?</em></h2>
+        <p style="color:rgba(255,255,255,0.6);font-size:16px;">Don't wait. Call us now and we'll do everything we can to get a technician to you today.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:center;">
+        <a href="tel:01634283215" class="btn btn--gold btn--lg">📞 01634 283215</a>
+        <a href="contact.html" class="btn btn--secondary">Request a Callback</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCREDITATION -->
+<div class="accred-strip">
+  <div class="container">
+    <div class="accred-strip__inner">
+      <p>Fully accredited, insured and council-approved. Our credentials aren't just badges — they're proof of our commitment to the highest standards.</p>
+      <div class="accred-badges">
+        <a href="https://bpca.org.uk/" target="_blank" class="accred-badge accred-badge--link">BPCA<br>Member</a>
+        <a href="https://www.rsph.org.uk/" target="_blank" class="accred-badge accred-badge--link">RSPH<br>Certified</a>
+        <div class="accred-badge">CEPA<br>Certified</div>
+        <a href="https://www.trustmark.org.uk/" target="_blank" class="accred-badge accred-badge--link">TrustMark<br>Registered</a>
+        <a href="https://www.medway.gov.uk/" target="_blank" class="accred-badge accred-badge--link">Medway Council<br>Approved</a>
+        <div class="accred-badge">Norse Group<br>Company</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">
+          <img src="https://www.medwaynorsepestcontrol.co.uk/images/Medway-Rev.png" alt="Medway Norse Pest Control" style="height:36px;width:auto;filter:brightness(0) invert(1);opacity:0.9;">
+        </div>
+        <p class="footer__desc">Medway Council's exclusive approved pest control provider. BPCA-accredited, locally based, and committed to protecting homes and businesses across Medway and Kent.</p>
+        <p class="footer__desc" style="margin-top:8px;font-size:13px;">Part of the <strong style="color:rgba(255,255,255,0.6);">Norse Group</strong> — one of the UK's largest facilities management companies.</p>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <div class="footer__links">
+          <a href="rats.html">Rat Control</a>
+          <a href="mice.html">Mice Control</a>
+          <a href="wasps.html">Wasp Nest Removal</a>
+          <a href="bed-bugs.html">Bed Bug Treatment</a>
+          <a href="fleas.html">Flea Treatment</a>
+          <a href="cockroaches.html">Cockroach Control</a>
+          <a href="birds.html">Bird Control</a>
+          <a href="services.html">All Services</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <div class="footer__links">
+          <a href="about.html">About Us</a>
+          <a href="commercial.html">Commercial</a>
+          <a href="prices.html">Price List</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact-item">
+          <span>📞</span>
+          <div><a href="tel:01634283215">01634 283215</a><br><span style="font-size:12px;color:rgba(255,255,255,0.35);">Mon–Fri 8am–5pm</span></div>
+        </div>
+        <div class="footer__contact-item">
+          <span>📧</span>
+          <div><a href="mailto:pestcontrol@ncsgrp.co.uk">pestcontrol@ncsgrp.co.uk</a></div>
+        </div>
+        <div class="footer__contact-item">
+          <span>📍</span>
+          <div>Pier Approach Road<br>Gillingham, Kent ME7 1RT</div>
+        </div>
+        <div class="footer__contact-item">
+          <span>📍</span>
+          <div>Stoney Lane, Maidstone Rd<br>Chatham, Kent ME1 3QY</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Medway Norse Pest Control. Part of Norse Group. All rights reserved.</p>
+      <div class="footer__bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://norsegroup.co.uk/" target="_blank">Norse Group</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- EMERGENCY FLOAT -->
+<div class="emergency-float">
+  <a href="tel:01634283215">📞 <span>01634 283215</span></a>
+</div>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use cookies to improve your experience. <a href="privacy.html">Learn more</a>.</p>
+  <div class="cookie-banner__btns">
+    <button class="btn btn--primary btn--sm" id="cookieAccept">Accept</button>
+    <button class="btn btn--outline btn--sm" style="color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.2);" id="cookieReject">Reject</button>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

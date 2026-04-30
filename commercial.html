@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Commercial pest control contracts for Medway restaurants, landlords, care homes and hotels. EHO and CQC compliant, BPCA accredited. Call 01634 283215.">
+  <title>Commercial Pest Control | Medway Norse Pest Control</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sector-tabs { display:flex; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); margin-bottom:36px; background:var(--white); }
+    .sector-tab { flex:1; background:transparent; border:none; border-right:1px solid var(--border); padding:18px 14px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; color:var(--grey); text-align:center; transition:all var(--transition); display:flex; flex-direction:column; align-items:center; gap:6px; }
+    .sector-tab:last-child { border-right:none; }
+    .sector-tab .ti { font-size:24px; }
+    .sector-tab.active { background:var(--navy); color:var(--white); }
+    .sector-tab:hover:not(.active) { background:var(--teal-pale); color:var(--navy); }
+    .sector-content { display:none; }
+    .sector-content.active { display:block; }
+    .sector-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); border-radius:var(--radius-lg); padding:44px; margin-bottom:32px; display:grid; grid-template-columns:1fr 220px; gap:36px; align-items:center; position:relative; overflow:hidden; }
+    .sector-hero::before { content:attr(data-icon); position:absolute; right:24px; bottom:-16px; font-size:180px; opacity:0.06; line-height:1; pointer-events:none; }
+    .sector-hero h2 { font-family:'Playfair Display',serif; font-size:clamp(24px,3vw,34px); color:var(--white); margin-bottom:12px; line-height:1.15; }
+    .sector-hero h2 em { color:var(--teal); font-style:normal; }
+    .sector-hero p { color:rgba(255,255,255,0.62); font-size:15px; line-height:1.7; }
+    .sector-cta { display:flex; flex-direction:column; gap:10px; }
+    .sector-cta .btn { justify-content:center; }
+    .risk-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:32px; }
+    .risk-box { background:var(--white); border-radius:var(--radius); border:1px solid var(--border); padding:26px; }
+    .risk-box.red { border-top:4px solid #d63031; }
+    .risk-box.teal { border-top:4px solid var(--teal); }
+    .risk-box h4 { font-family:'Playfair Display',serif; font-size:18px; color:var(--navy); margin-bottom:14px; }
+    .risk-box ul li { font-size:14px; color:var(--grey-mid); padding:7px 0 7px 22px; border-bottom:1px solid var(--grey-light); position:relative; line-height:1.4; }
+    .risk-box ul li:last-child { border-bottom:none; }
+    .risk-box.red ul li::before { content:'⚠'; position:absolute; left:0; font-size:11px; top:9px; }
+    .risk-box.teal ul li::before { content:'✓'; position:absolute; left:0; color:var(--teal); font-weight:700; top:7px; }
+    .contract-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:32px; }
+    .contract-card { background:var(--white); border-radius:var(--radius); border:1px solid var(--border); padding:28px 22px; text-align:center; position:relative; transition:all var(--transition); }
+    .contract-card:hover { border-color:var(--teal); box-shadow:var(--shadow-md); }
+    .contract-card.featured { border-color:var(--teal); background:linear-gradient(180deg,var(--teal-pale) 0%,var(--white) 40%); }
+    .most-pop { position:absolute; top:-1px; left:50%; transform:translateX(-50%); background:var(--teal); color:var(--white); font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:4px 14px; border-radius:0 0 8px 8px; white-space:nowrap; }
+    .contract-card .ci { font-size:34px; margin-bottom:14px; display:block; }
+    .contract-card h4 { font-family:'Playfair Display',serif; font-size:20px; color:var(--navy); margin-bottom:8px; }
+    .contract-card p { font-size:13px; color:var(--grey); line-height:1.6; margin-bottom:16px; }
+    .c-price { font-family:'Playfair Display',serif; font-size:24px; color:var(--teal); font-weight:700; margin-bottom:4px; }
+    .c-note { font-size:11px; color:var(--grey); }
+    .testimonial-strip { background:var(--off-white); border-radius:var(--radius-lg); padding:30px 36px; margin-bottom:32px; border:1px solid var(--border); display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .ts-item { padding-right:28px; border-right:1px solid var(--border); }
+    .ts-item:last-child { border-right:none; padding-right:0; }
+    .ts-stars { color:var(--gold); font-size:14px; margin-bottom:8px; }
+    .ts-item p { font-size:13px; color:var(--grey-mid); line-height:1.65; font-style:italic; margin-bottom:10px; }
+    .ts-reviewer { font-size:12px; color:var(--grey); font-weight:600; }
+    .sector-accred { background:var(--navy); border-radius:var(--radius); padding:24px 28px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .sector-accred p { color:rgba(255,255,255,0.6); font-size:13px; flex:1; }
+    @media(max-width:768px) {
+      .sector-hero { grid-template-columns:1fr; }
+      .risk-grid { grid-template-columns:1fr; }
+      .contract-cards { grid-template-columns:1fr; }
+      .testimonial-strip { grid-template-columns:1fr; }
+      .ts-item { border-right:none; padding-right:0; border-bottom:1px solid var(--border); padding-bottom:16px; }
+      .ts-item:last-child { border-bottom:none; padding-bottom:0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar__inner">
+      <div class="topbar__contact">
+        <a href="tel:01634283215">📞 01634 283215</a>
+        <a href="mailto:pestcontrol@ncsgrp.co.uk">✉️ pestcontrol@ncsgrp.co.uk</a>
+      </div>
+      <div class="topbar__badges">
+        <div class="topbar__pill">🏛️ Council Approved</div>
+        <div class="topbar__pill--gold topbar__pill">⚡ Same-Day Available</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="https://www.medwaynorsepestcontrol.co.uk/images/Medway-Rev.png" alt="Medway Norse Pest Control" style="height:40px;width:auto;display:block;">Medway <span>Norse</span> Pest Control
+      </a>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a href="services.html"><span>🐀</span> All Services</a>
+            <a href="rats.html"><span>🐀</span> Rats</a>
+            <a href="mice.html"><span>🐭</span> Mice</a>
+            <a href="wasps.html"><span>🐝</span> Wasps</a>
+            <a href="bed-bugs.html"><span>🛏️</span> Bed Bugs</a>
+            <a href="fleas.html"><span>🦟</span> Fleas</a>
+            <a href="cockroaches.html"><span>🪲</span> Cockroaches</a>
+            <a href="birds.html"><span>🐦</span> Bird Control</a>
+          </div>
+        </div>
+        <a href="commercial.html" class="active">Commercial</a>
+        <a href="prices.html">Prices</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="nav__cta">📞 Get Help Now</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile-menu" id="mobileMenu" style="display:none">
+    <a href="index.html">Home</a><a href="services.html">Services</a><a href="commercial.html">Commercial</a>
+    <a href="prices.html">Prices</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+    <a href="contact.html" class="nav__cta">📞 Get Help Now</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__inner">
+      <div class="hero__breadcrumb">Home › <span>Commercial Pest Control</span></div>
+      <div class="badge badge--white">🏛️ Medway Council Approved</div>
+      <h1><em>Commercial</em> Pest Control<br>for Medway Businesses</h1>
+      <p>Compliance-grade pest management for the sectors that can't afford to get it wrong. BPCA-accredited, fully documented, EHO and CQC audit-ready contracts.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Sector Tabs -->
+    <div class="sector-tabs" id="restaurants">
+      <button class="sector-tab active" onclick="switchSector('restaurants',this)"><span class="ti">🍽️</span>Restaurants &amp; Catering</button>
+      <button class="sector-tab" onclick="switchSector('landlords',this)" id="landlords-tab"><span class="ti">🏠</span>Landlords &amp; Property</button>
+      <button class="sector-tab" onclick="switchSector('carehomes',this)"><span class="ti">🏥</span>Care Homes</button>
+      <button class="sector-tab" onclick="switchSector('hotels',this)"><span class="ti">🏨</span>Hotels &amp; Hospitality</button>
+    </div>
+
+    <!-- RESTAURANTS -->
+    <div id="sector-restaurants" class="sector-content active">
+      <div class="sector-hero" data-icon="🍽️">
+        <div>
+          <h2>Pest Control for <em>Restaurants</em> &amp; Food Businesses</h2>
+          <p>A single EHO inspection following a pest sighting can trigger a zero food hygiene rating, closure orders, and permanent reputational damage online. Your Food Hygiene Rating depends on it — don't leave it to chance.</p>
+        </div>
+        <div class="sector-cta">
+          <a href="contact.html" class="btn btn--primary">Book a Free Survey</a>
+          <a href="tel:01634283215" class="btn btn--secondary">📞 01634 283215</a>
+        </div>
+      </div>
+      <div class="risk-grid">
+        <div class="risk-box red">
+          <h4>⚠️ The Risks You Face</h4>
+          <ul>
+            <li>EHO inspection — immediate closure if pests found in food prep areas</li>
+            <li>Food Hygiene Rating dropped to zero — published publicly on ratings.food.gov.uk</li>
+            <li>Food Safety Act 1990 prosecution — unlimited fines</li>
+            <li>Reputational damage via Google, TripAdvisor and social media</li>
+            <li>Rodents and cockroaches contaminate stock, surfaces and packaging</li>
+          </ul>
+        </div>
+        <div class="risk-box teal">
+          <h4>✓ What We Provide</h4>
+          <ul>
+            <li>Scheduled preventative visits — monthly, bi-monthly or quarterly contracts</li>
+            <li>Full written service reports for your EHO audit file</li>
+            <li>Same-day emergency response for active infestations</li>
+            <li>Unmarked vehicles — total operational discretion</li>
+            <li>Rodent, cockroach, fly, ant and stored product insect control</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contract-cards">
+        <div class="contract-card"><span class="ci">📋</span><h4>Reactive</h4><p>Call us when you need us. No contract required. Ideal for occasional issues or one-off treatments.</p><div class="c-price">From £75</div><div class="c-note">per treatment visit + VAT</div></div>
+        <div class="contract-card featured"><div class="most-pop">Most Popular</div><span class="ci">📅</span><h4>Annual Contract</h4><p>Scheduled visits, full documentation pack, priority emergency response and EHO audit support included.</p><div class="c-price">POA</div><div class="c-note">free site survey required</div></div>
+        <div class="contract-card"><span class="ci">🤝</span><h4>Multi-Site</h4><p>Group pricing for restaurant chains, franchise groups or multi-site operators across Medway and Kent.</p><div class="c-price">POA</div><div class="c-note">contact for group rates</div></div>
+      </div>
+      <div class="testimonial-strip">
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"Called after a rodent issue was flagged during our pre-EHO inspection. They were on site same-day, sorted the problem and provided a full written report. Our 5-star rating was maintained."</p><div class="ts-reviewer">Restaurant owner, Chatham</div></div>
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"Professional, discreet and thorough. The documentation they provide is exactly what EHO inspectors want to see. We've had zero issues since going on contract."</p><div class="ts-reviewer">Café owner, Gillingham</div></div>
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"The annual contract gives us complete peace of mind. Regular visits, reports always on file, and they respond fast if anything comes up between scheduled visits."</p><div class="ts-reviewer">Kitchen manager, Rochester</div></div>
+      </div>
+      <div class="sector-accred"><p>Medway Council's exclusive approved provider. BPCA member. CEPA certified. Fully insured and documented for EHO compliance.</p><div class="accred-badges"><div class="accred-badge">BPCA</div><div class="accred-badge">CEPA</div><div class="accred-badge">Council Approved</div><div class="accred-badge">TrustMark</div></div></div>
+    </div>
+
+    <!-- LANDLORDS -->
+    <div id="sector-landlords" class="sector-content">
+      <div class="sector-hero" data-icon="🏠">
+        <div>
+          <h2>Pest Control for <em>Landlords</em> &amp; Property Managers</h2>
+          <p>Pest infestations in rental properties can trigger tenant disputes, council enforcement notices and costly void periods. We provide fast, documented treatment across single lets, HMOs and managed portfolios.</p>
+        </div>
+        <div class="sector-cta">
+          <a href="contact.html" class="btn btn--primary">Book a Free Survey</a>
+          <a href="tel:01634283215" class="btn btn--secondary">📞 01634 283215</a>
+        </div>
+      </div>
+      <div class="risk-grid">
+        <div class="risk-box red">
+          <h4>⚠️ The Risks You Face</h4>
+          <ul>
+            <li>HMO licence conditions — unresolved pest issues can trigger revocation</li>
+            <li>Tenant rent withholding or dispute under Landlord &amp; Tenant Act</li>
+            <li>Council enforcement notices and statutory nuisance proceedings</li>
+            <li>Extended void periods when infestations are discovered between tenancies</li>
+            <li>Structural damage — rodents gnaw cables, pipework and building fabric</li>
+          </ul>
+        </div>
+        <div class="risk-box teal">
+          <h4>✓ What We Provide</h4>
+          <ul>
+            <li>Rapid response for void properties — sorted before new tenants move in</li>
+            <li>Block contracts across multiple properties at preferential rates</li>
+            <li>Written service records for council inspectors and HMO licensing</li>
+            <li>Tenant liaison — we'll deal with them directly where required</li>
+            <li>Full service range: rodents, insects, bed bugs, bird proofing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contract-cards">
+        <div class="contract-card"><span class="ci">🏠</span><h4>Single Property</h4><p>One-off treatments or a rolling agreement for a single rental property. Invoiced per visit or programme.</p><div class="c-price">From £75</div><div class="c-note">per treatment + VAT</div></div>
+        <div class="contract-card featured"><div class="most-pop">Best Value</div><span class="ci">🏘️</span><h4>Portfolio Contract</h4><p>Priority response across your portfolio. Discounted rates, consolidated invoicing and a single point of contact.</p><div class="c-price">POA</div><div class="c-note">free site survey required</div></div>
+        <div class="contract-card"><span class="ci">🔑</span><h4>HMO Specialist</h4><p>Compliance-focused programme for HMO landlords. Documentation pack included for annual licence renewal submissions.</p><div class="c-price">POA</div><div class="c-note">contact for HMO rates</div></div>
+      </div>
+      <div class="testimonial-strip">
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"I manage over 20 properties across Medway. Norse are my first call for any pest issue — fast, professional and the paperwork is always in order for council inspections."</p><div class="ts-reviewer">Letting agent, Gillingham</div></div>
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"Had a rat issue in a void property between tenants. They came out within 24 hours, resolved it and I had a written report the same day. Couldn't ask for more."</p><div class="ts-reviewer">Private landlord, Rochester</div></div>
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"The block contract pricing is very competitive. Having one reliable contractor across all my HMOs has made compliance significantly easier to manage."</p><div class="ts-reviewer">HMO landlord, Chatham</div></div>
+      </div>
+      <div class="sector-accred"><p>Fully documented service records. Compliance-grade treatment for HMO and private landlords across Medway.</p><div class="accred-badges"><div class="accred-badge">BPCA</div><div class="accred-badge">CEPA</div><div class="accred-badge">Council Approved</div><div class="accred-badge">TrustMark</div></div></div>
+    </div>
+
+    <!-- CARE HOMES -->
+    <div id="sector-carehomes" class="sector-content">
+      <div class="sector-hero" data-icon="🏥">
+        <div>
+          <h2>Pest Control for <em>Care Homes</em> &amp; Healthcare Settings</h2>
+          <p>CQC inspectors expect to see a documented pest control programme in place. The vulnerability of residents makes zero tolerance essential — we provide the compliance documentation to back it up.</p>
+        </div>
+        <div class="sector-cta">
+          <a href="contact.html" class="btn btn--primary">Book a Free Survey</a>
+          <a href="tel:01634283215" class="btn btn--secondary">📞 01634 283215</a>
+        </div>
+      </div>
+      <div class="risk-grid">
+        <div class="risk-box red">
+          <h4>⚠️ The Risks You Face</h4>
+          <ul>
+            <li>CQC 'Requires Improvement' or 'Inadequate' rating for infection control failures</li>
+            <li>HSE intervention following pest-related incidents involving residents</li>
+            <li>Resident welfare risk — immunocompromised individuals are especially vulnerable</li>
+            <li>Reputational damage and family complaints escalating directly to CQC</li>
+            <li>Environmental Health Orders for kitchens found with rodents or cockroaches</li>
+          </ul>
+        </div>
+        <div class="risk-box teal">
+          <h4>✓ What We Provide</h4>
+          <ul>
+            <li>Scheduled monthly visits with full written service reports</li>
+            <li>CQC audit-ready documentation maintained throughout the contract</li>
+            <li>COSHH-compliant treatment methods — resident and staff safety paramount</li>
+            <li>Uniformed, DBS-checked technicians — minimal disruption to residents</li>
+            <li>24-hour emergency call-out for active infestations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contract-cards">
+        <div class="contract-card"><span class="ci">📄</span><h4>Reactive Cover</h4><p>Emergency response as needed. Suitable for lower-risk settings with an existing prevention programme.</p><div class="c-price">From £75</div><div class="c-note">per call-out + VAT</div></div>
+        <div class="contract-card featured"><div class="most-pop">CQC Aligned</div><span class="ci">📋</span><h4>Monthly Contract</h4><p>Scheduled monthly visits, full COSHH documentation, service reports and emergency priority response included.</p><div class="c-price">POA</div><div class="c-note">free site survey required</div></div>
+        <div class="contract-card"><span class="ci">🏥</span><h4>Multi-Site Group</h4><p>Group contract for care home operators with multiple Medway sites. Unified documentation standard across all locations.</p><div class="c-price">POA</div><div class="c-note">contact for group rates</div></div>
+      </div>
+      <div class="testimonial-strip">
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"Our CQC inspector specifically commented positively on our pest control documentation during inspection. Norse provide everything we need — reports, COSHH sheets and full visit logs."</p><div class="ts-reviewer">Care home manager, Chatham</div></div>
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"Completely trustworthy with vulnerable residents present. Technicians are professional, discreet and always explain what they are doing and why. Exactly right for our setting."</p><div class="ts-reviewer">Deputy manager, Gillingham</div></div>
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"Monthly visits keep our compliance file up to date. When we had an emergency they responded within hours. The level of service is exactly what a care home requires."</p><div class="ts-reviewer">Facilities manager, Rochester</div></div>
+      </div>
+      <div class="sector-accred"><p>CQC audit-ready documentation. COSHH-compliant treatments. Medway Council's approved provider — highest standard of compliance assurance available.</p><div class="accred-badges"><div class="accred-badge">BPCA</div><div class="accred-badge">CEPA</div><div class="accred-badge">Council Approved</div><div class="accred-badge">TrustMark</div></div></div>
+    </div>
+
+    <!-- HOTELS -->
+    <div id="sector-hotels" class="sector-content">
+      <div class="sector-hero" data-icon="🏨">
+        <div>
+          <h2>Pest Control for <em>Hotels</em> &amp; Hospitality Businesses</h2>
+          <p>A single bed bug mention on TripAdvisor can cost thousands in cancellations and months of reputation recovery. Fast, discreet pest control with a clear bed bug protocol is non-negotiable for any hotel in Medway.</p>
+        </div>
+        <div class="sector-cta">
+          <a href="contact.html" class="btn btn--primary">Book a Free Survey</a>
+          <a href="tel:01634283215" class="btn btn--secondary">📞 01634 283215</a>
+        </div>
+      </div>
+      <div class="risk-grid">
+        <div class="risk-box red">
+          <h4>⚠️ The Risks You Face</h4>
+          <ul>
+            <li>Bed bug guest complaints published on TripAdvisor and Booking.com</li>
+            <li>EHO inspection following guest complaints — potential closure notices</li>
+            <li>Food hygiene rating at risk if cockroaches or rodents found in kitchen</li>
+            <li>Compensation claims and adverse publicity from affected guests</li>
+            <li>Staff wellbeing and retention issues in pest-affected properties</li>
+          </ul>
+        </div>
+        <div class="risk-box teal">
+          <h4>✓ What We Provide</h4>
+          <ul>
+            <li>Dedicated bed bug rapid-response protocol — rooms back in service fast</li>
+            <li>Unmarked vehicles and uniformed technicians — complete guest discretion</li>
+            <li>Out-of-hours treatments to avoid any disruption to guests</li>
+            <li>Rodent and insect control for kitchens, bars and food service areas</li>
+            <li>Scheduled prevention contract with full audit documentation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contract-cards">
+        <div class="contract-card"><span class="ci">🚨</span><h4>Emergency Response</h4><p>Same-day or next-day response for active infestations. Bed bug protocol available 7 days a week.</p><div class="c-price">From £180</div><div class="c-note">bed bug from + VAT</div></div>
+        <div class="contract-card featured"><div class="most-pop">Most Popular</div><span class="ci">🛡️</span><h4>Prevention Contract</h4><p>Scheduled visits, proactive bed bug room inspections on rotation, monitoring and full audit documentation.</p><div class="c-price">POA</div><div class="c-note">free site survey required</div></div>
+        <div class="contract-card"><span class="ci">🏨</span><h4>Group Contract</h4><p>Multi-site contracts for hotel groups operating across Medway and North Kent. Unified service standard guaranteed.</p><div class="c-price">POA</div><div class="c-note">contact for group rates</div></div>
+      </div>
+      <div class="testimonial-strip">
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"Had a bed bug complaint from a guest on a Friday evening. Medway Norse were on-site Saturday morning, treated the room discreetly and we had it back in service by Sunday night. Incredible response."</p><div class="ts-reviewer">Hotel manager, Rochester</div></div>
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"The unmarked van matters enormously. Our guests have no idea pest control has visited — which is exactly what you need in a hotel environment. Completely professional throughout."</p><div class="ts-reviewer">General manager, Chatham</div></div>
+        <div class="ts-item"><div class="ts-stars">★★★★★</div><p>"The annual contract covers our kitchen, guest rooms and public areas. The regular documentation gives us everything needed for EHO compliance. Highly recommended."</p><div class="ts-reviewer">B&amp;B owner, Gillingham</div></div>
+      </div>
+      <div class="sector-accred"><p>Discreet, professional, fully documented. Medway Council's exclusive approved provider — the credentials that matter most when EHO inspectors arrive.</p><div class="accred-badges"><div class="accred-badge">BPCA</div><div class="accred-badge">CEPA</div><div class="accred-badge">Council Approved</div><div class="accred-badge">TrustMark</div></div></div>
+    </div>
+
+    <!-- WHY MEDWAY NORSE FOR COMMERCIAL -->
+    <div style="margin-top:64px;">
+      <div class="text-center" style="margin-bottom:40px;">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">The <em>Commercial Advantage</em> of Norse</h2>
+        <span class="divider divider--center"></span>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-card__icon">🏛️</div><h4>Council Authority</h4><p>As Medway Council's exclusive approved provider, our documentation and standards carry the weight of local authority endorsement — invaluable during EHO or CQC inspections.</p></div>
+        <div class="why-card"><div class="why-card__icon">📋</div><h4>Audit-Ready Documentation</h4><p>Every visit produces a full written service report that meets BPCA and CEPA standards. Your audit file is always up to date and inspection-ready.</p></div>
+        <div class="why-card"><div class="why-card__icon">⚡</div><h4>Emergency Priority</h4><p>Contract customers receive priority emergency response. We understand that a pest sighting in a commercial setting demands immediate action — we deliver it.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="accred-strip">
+  <div class="container">
+    <div class="accred-strip__inner">
+      <p>Fully accredited, insured and council-approved. The credentials commercial customers need.</p>
+      <div class="accred-badges">
+        <div class="accred-badge">BPCA Member</div><div class="accred-badge">RSPH Certified</div>
+        <div class="accred-badge">CEPA Certified</div><div class="accred-badge">TrustMark</div>
+        <div class="accred-badge">Council Approved</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="https://www.medwaynorsepestcontrol.co.uk/images/Medway-Rev.png" alt="Medway Norse Pest Control" style="height:36px;width:auto;filter:brightness(0) invert(1);opacity:0.9;"></div>
+        <p class="footer__desc">Medway Council's exclusive approved pest control provider. BPCA-accredited, locally based, protecting homes and businesses across Medway and Kent.</p>
+      </div>
+      <div><div class="footer__col-title">Services</div><div class="footer__links"><a href="rats.html">Rat Control</a><a href="mice.html">Mice Control</a><a href="wasps.html">Wasp Nest Removal</a><a href="bed-bugs.html">Bed Bug Treatment</a><a href="fleas.html">Flea Treatment</a><a href="services.html">All Services</a></div></div>
+      <div><div class="footer__col-title">Company</div><div class="footer__links"><a href="about.html">About Us</a><a href="commercial.html">Commercial</a><a href="prices.html">Price List</a><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a><a href="privacy.html">Privacy Policy</a></div></div>
+      <div><div class="footer__col-title">Contact</div><div class="footer__contact-item"><span>📞</span><div><a href="tel:01634283215">01634 283215</a></div></div><div class="footer__contact-item"><span>📧</span><div><a href="mailto:pestcontrol@ncsgrp.co.uk">pestcontrol@ncsgrp.co.uk</a></div></div><div class="footer__contact-item"><span>📍</span><div>Pier Approach Road, Gillingham, Kent ME7 1RT</div></div></div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Medway Norse Pest Control. Part of Norse Group.</p>
+      <div class="footer__bottom-links"><a href="privacy.html">Privacy Policy</a><a href="contact.html">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="emergency-float"><a href="tel:01634283215">📞 <span>01634 283215</span></a></div>
+<div class="cookie-banner" id="cookieBanner"><p>We use cookies. <a href="privacy.html">Learn more</a>.</p><div class="cookie-banner__btns"><button class="btn btn--primary btn--sm" id="cookieAccept">Accept</button><button class="btn btn--sm" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.6);border-radius:6px;cursor:pointer;padding:9px 20px;" id="cookieReject">Reject</button></div></div>
+
+<script src="shared.js"></script>
+<script>
+function switchSector(name, btn) {
+  document.querySelectorAll('.sector-content').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sector-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('sector-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+// Handle hash links e.g. commercial.html#landlords
+window.addEventListener('load', function() {
+  const hash = window.location.hash.replace('#','');
+  const map = { restaurants: 0, landlords: 1, carehomes: 2, hotels: 3 };
+  if (hash && map[hash] !== undefined) {
+    const tabs = document.querySelectorAll('.sector-tab');
+    switchSector(hash, tabs[map[hash]]);
+  }
+});
+</script>
+</body>
+</html>
