@@ -269,7 +269,7 @@ h5 { font-size: 16px; }
   transition: all var(--transition);
 }
 .nav__dropdown-menu a:hover { background: var(--teal-pale); color: var(--teal) !important; }
-.nav__dropdown-menu a span { font-size: 18px; }
+.nav__dropdown-icon { width: 22px; height: 22px; object-fit: cover; border-radius: 3px; }
 .nav__cta {
   background: var(--teal); color: var(--white) !important;
   border-radius: 6px; padding: 9px 20px !important;
@@ -450,7 +450,8 @@ h5 { font-size: 16px; }
   border-color: var(--teal); color: var(--text);
 }
 .service-card__icon {
-  font-size: 36px; margin-bottom: 12px; display: block;
+  width: 120px; height: 120px; margin: 0 auto 12px;
+  display: block; object-fit: cover; border-radius: 8px;
   transition: transform var(--transition);
 }
 .service-card:hover .service-card__icon { transform: scale(1.12); }
