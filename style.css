@@ -287,7 +287,7 @@ h5 { font-size: 16px; }
   border-radius: 6px; padding: 9px 20px !important;
   font-weight: 700 !important; font-size: 13px !important;
   transition: all var(--transition) !important;
-  position: relative; right: 25px; top: 100px;
+  position: relative; right: -25px; top: -2px;
 }
 .nav__cta:hover { background: var(--teal-light) !important; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,117,143,0.35) !important; }
 .nav__cta.active::after { display: none !important; }
@@ -889,7 +889,7 @@ h5 { font-size: 16px; }
 @media (max-width: 820px) {
   .nav__links { gap: 0; }
   .nav__links a { padding: 8px 10px; font-size: 12px; }
-  .nav__cta { padding: 8px 16px !important; font-size: 12px !important; }
+  .nav__cta { padding: 8px 16px !important; font-size: 12px !important; top: 85px !important; right: 30px !important; }
   .nav__logo { font-size: 17px; }
   .emergency-float { bottom: 20px; right: 12px; }
 }
