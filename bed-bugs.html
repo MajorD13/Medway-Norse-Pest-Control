@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="/Medway-Norse-Pest-Control/">
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    if (window.location.hostname.includes('github.io')) {
+      const base = document.createElement('base');
+      base.href = '/Medway-Norse-Pest-Control/';
+      document.head.insertBefore(base, document.head.firstChild);
+    }
+  </script>
   <meta name="description" content="Bed Bug Treatment in Medway — council-approved, professional pest control. Targeted insecticide programme by bedroom count. 1 or 2-visit options for established infestations. Call 01634 283215.">
   <title>Bed Bug Treatment Medway | Medway Norse Pest Control</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">

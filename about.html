@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="/Medway-Norse-Pest-Control/">
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    if (window.location.hostname.includes('github.io')) {
+      const base = document.createElement('base');
+      base.href = '/Medway-Norse-Pest-Control/';
+      document.head.insertBefore(base, document.head.firstChild);
+    }
+  </script>
   <meta name="description" content="Meet the Medway Norse Pest Control team — Neal, Dave and Tony. Council-approved, RSPH Level 2 qualified, with 60+ years combined experience.">
   <title>About Us | Medway Norse Pest Control</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">

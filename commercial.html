@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="/Medway-Norse-Pest-Control/">
   <meta charset="UTF-8">
+  <script>
+    if (window.location.hostname.includes('github.io')) {
+      const base = document.createElement('base');
+      base.href = '/Medway-Norse-Pest-Control/';
+      document.head.insertBefore(base, document.head.firstChild);
+    }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Commercial pest control contracts for Medway restaurants, landlords, care homes and hotels. EHO and CQC compliant, BPCA accredited. Call 01634 283215.">
   <title>Commercial Pest Control | Medway Norse Pest Control</title>
