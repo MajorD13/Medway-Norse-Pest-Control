@@ -224,6 +224,155 @@
 
 <noscript><div class="cookie-banner">This site uses cookies. Please enable JavaScript to manage your preferences.</div></noscript>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+
+    if (!form) return;
+
+    const fields = {
+      fname: {
+        input: document.getElementById('fname'),
+        error: document.getElementById('fnameError'),
+        message: 'Please enter your first name.',
+        validate: value => isValidName(value)
+      },
+      lname: {
+        input: document.getElementById('lname'),
+        error: document.getElementById('lnameError'),
+        message: 'Please enter your last name.',
+        validate: value => isValidName(value)
+      },
+      phone: {
+        input: document.getElementById('phone'),
+        error: document.getElementById('phoneError'),
+        message: 'Please enter a valid UK phone number, for example 01634 283215.',
+        validate: value => isValidPhone(value)
+      },
+      email: {
+        input: document.getElementById('email'),
+        error: document.getElementById('emailError'),
+        message: 'Please enter a valid email address.',
+        validate: value => isValidEmail(value)
+      },
+      postcode: {
+        input: document.getElementById('postcode'),
+        error: document.getElementById('postcodeError'),
+        message: 'Please enter a valid UK postcode, for example ME1 1AA.',
+        validate: value => isValidPostcode(value)
+      },
+      property: {
+        input: document.getElementById('property'),
+        error: document.getElementById('propertyError'),
+        message: 'Please select the type of property.',
+        validate: value => value.trim() !== ''
+      },
+      pest: {
+        input: document.getElementById('pest'),
+        error: document.getElementById('pestError'),
+        message: 'Please select the pest type.',
+        validate: value => value.trim() !== ''
+      }
+    };
+
+    function isValidName(value) {
+      const name = value.trim();
+
+      if (name.length < 2 || name.length > 50) {
+        return false;
+      }
+
+      return /^[a-zA-ZÀ-ÿ\s'-]+$/.test(name);
+    }
+
+    function isValidPhone(value) {
+      const cleaned = value.replace(/[\s()-]/g, '');
+
+      let normalised = cleaned;
+
+      if (normalised.startsWith('+44')) {
+        normalised = '0' + normalised.slice(3);
+      }
+
+      return /^0\d{9,10}$/.test(normalised);
+    }
+
+    function isValidEmail(value) {
+      const email = value.trim();
+
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function isValidPostcode(value) {
+      const postcode = value.trim().toUpperCase();
+
+      return /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/.test(postcode);
+    }
+
+    function setFieldState(field, isValid) {
+      const input = field.input;
+      const error = field.error;
+
+      input.classList.remove('is-invalid', 'is-valid');
+
+      if (isValid) {
+        error.textContent = '';
+        input.classList.add('is-valid');
+      } else {
+        error.textContent = field.message;
+        input.classList.add('is-invalid');
+      }
+    }
+
+    function validateField(field) {
+      const value = field.input.value;
+      const isValid = field.validate(value);
+
+      setFieldState(field, isValid);
+
+      return isValid;
+    }
+
+    Object.values(fields).forEach(field => {
+      field.input.addEventListener('blur', function () {
+        validateField(field);
+      });
+
+      field.input.addEventListener('input', function () {
+        if (field.input.classList.contains('is-invalid')) {
+          validateField(field);
+        }
+      });
+
+      field.input.addEventListener('change', function () {
+        validateField(field);
+      });
+    });
+
+    form.addEventListener('submit', function (event) {
+      let formIsValid = true;
+      let firstInvalidField = null;
+
+      Object.values(fields).forEach(field => {
+        const isValid = validateField(field);
+
+        if (!isValid && !firstInvalidField) {
+          firstInvalidField = field.input;
+        }
+
+        if (!isValid) {
+          formIsValid = false;
+        }
+      });
+
+      if (!formIsValid) {
+        event.preventDefault();
+        firstInvalidField.focus();
+      }
+    });
+  });
+</script>
+
 <script src="shared.js"></script>
 </body>
 </html>
